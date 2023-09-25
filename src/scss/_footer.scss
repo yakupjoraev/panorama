@@ -1,0 +1,260 @@
+// Footer
+.footer {
+  padding: 100px 0 108px;
+  background-color: var(--Primary, #38332D);
+
+  // .footer__inner
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 356px 1fr 320px;
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: space-between;
+    align-items: baseline;
+
+    & a {
+      transition: color 0.2s linear;
+    }
+
+    & a:hover {
+      color: var(--Light);
+    }
+
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 60px;
+      padding-left: 35px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      row-gap: 30px;
+      padding-left: 0;
+    }
+
+  }
+
+  // .footer__logo
+
+  &__logo {
+    order: 1;
+
+    @media (max-width: $breakpoint992) {
+      img {
+        max-width: 220px;
+      }
+
+    }
+
+    @media (max-width: $breakpoint768) {
+      img {
+        max-width: 200px;
+      }
+    }
+
+  }
+
+  // .footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    margin-top: 50px;
+    order: 4;
+
+    @media (max-width: $breakpoint992) {
+      order: 2;
+      margin-right: 55px;
+      margin-top: 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      order: 3;
+      margin: 15px 40px 15px 0;
+    }
+  }
+
+  // .footer__socials-label
+
+  &__socials-label {
+    margin-right: 10px;
+    font-size: 24px;
+    letter-spacing: 0.24px;
+    color: var(--White);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 22px;
+      line-height: 115%;
+    }
+
+  }
+
+  // .footer__socials-link
+
+  &__socials-link {
+
+    img {
+      transition: opacity 0.2s linear;
+    }
+
+    &:hover img {
+      opacity: 0.5;
+    }
+
+    @media (max-width: $breakpoint992) {
+      img {
+        max-width: 40px;
+      }
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      img {
+        max-width: 50px;
+      }
+    }
+  }
+
+  // .footer__politycal
+
+  &__politycal {
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    color: var(--White);
+
+    align-self: end;
+    order: 5;
+
+    br {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint992) {
+      font-size: 14px;
+      letter-spacing: 0.14px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      order: 4;
+      font-size: 16px;
+      letter-spacing: 0.16px;
+
+      br {
+        display: block;
+      }
+    }
+  }
+
+  // .footer__nav
+
+  &__nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+    row-gap: 14px;
+    column-gap: 32px;
+    max-width: 420px;
+    margin: 0 auto;
+    background-color: transparent;
+
+    grid-row: span 3;
+    order: 2;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 10px;
+      max-width: 320px;
+      margin-left: 0;
+    }
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+  }
+
+  // .footer__nav-link
+
+  &__nav-link {
+    letter-spacing: 0.18px;
+    font-size: 18px;
+    color: var(--White);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      letter-spacing: 0.16px;
+    }
+
+  }
+
+  // .footer__contacts
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+
+    grid-row: span 3;
+    order: 3;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 10px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      order: 2;
+      grid-row: span 1;
+    }
+  }
+
+  // .footer__contacts-group
+
+  &__contacts-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+  }
+
+  // .footer__contacts-lablel
+
+  &__contacts-lablel {
+    font-family: var(--secondary-font);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.24px;
+    color: var(--Light, #AB8C6F);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 22px;
+      letter-spacing: 0.22px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 24px;
+      letter-spacing: 0.24px;
+    }
+  }
+
+  // .footer__contacts-link
+
+  &__contacts-link {
+    font-size: 22px;
+    letter-spacing: 0.22px;
+    color: var(--White);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 20px;
+      letter-spacing: 0.2px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 22px;
+      letter-spacing: 0.22px;
+    }
+  }
+}
