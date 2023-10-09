@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -15,7 +16,17 @@
 
   <!-- Main Page -->
   <main class="main">
-    @@include('./html/_hero.html')
+    <section class="hero-name" style="background-image: url('../img/news-bg.jpg');">
+      <div class="container">
+        <div class="hero-name__inner">
+          <h1>
+            Новости <i> Panorama</i>
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    @@include('./html/_news.html')
   </main>
 
   <!-- Footer -->
@@ -23,6 +34,7 @@
 
 </body>
 
+<script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>

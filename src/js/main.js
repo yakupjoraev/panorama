@@ -52,3 +52,30 @@ function fixedNav() {
   }
 }
 window.addEventListener('scroll', fixedNav)
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const sliders = document.querySelectorAll('.swiper');
+  sliders.forEach(function (slider) {
+    const sliderId = slider.getAttribute('data-slider-container');
+    new Swiper(slider, {
+      spaceBetween: 20,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: `[data-slider-next="${sliderId}"]`,
+        prevEl: `[data-slider-prev="${sliderId}"]`,
+      },
+      pagination: {
+        el: `[data-slider-pagination="${sliderId}"]`,
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: 20,
+        },
+        991: {
+          spaceBetween: 15,
+        },
+      },
+    });
+  });
+});

@@ -52,6 +52,102 @@ html {
   flex-grow: 1;
 }
 
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px 40px;
+
+  background-color: var(--Light, #AB8C6F);
+  border: 1px solid transparent;
+
+  font-family: var(--primary-font);
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: var(--White, #FFF);
+
+  transition: background-color 0.2s linear, border-color 0.2s linear;
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--Light, #AB8C6F);
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
+.secondary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px 40px;
+
+  background-color: transparent;
+  border: 1px solid var(--Light, #AB8C6F);
+
+  font-family: var(--primary-font);
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: var(--White, #FFF);
+
+  transition: background-color 0.2s linear, border-color 0.2s linear;
+
+  &:hover {
+    background-color: var(--Light, #AB8C6F);
+    border-color: transparent;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
+.third-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px 40px;
+
+  border: 1px solid var(--Dark, #302B27);
+  background: var(--Dark, #302B27);
+
+  font-family: var(--primary-font);
+  font-family: Jost;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.18px;
+  color: var(--White, #FFF);
+
+  transition: background-color 0.2s linear, border-color 0.2s linear;
+
+  &:hover {
+    background-color: var(--Light, #AB8C6F);
+    border-color: transparent;
+  }
+
+  @media (max-width: $breakpoint992) {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+}
+
 // Animations
 // Fade
 @keyframes fade {

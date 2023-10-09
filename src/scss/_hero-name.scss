@@ -1,0 +1,56 @@
+.hero-name {
+  width: 100%;
+  min-height: 506px;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+
+  @media (max-width: $breakpoint768) {
+    min-height: 376px;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 85px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    color: var(--White, #FFF);
+
+    i {
+      font-style: italic;
+    }
+
+    @media (max-width: $breakpoint1450) {
+      font-size: 70px;
+    }
+
+
+    @media (max-width: $breakpoint992) {
+      font-size: 48px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      font-size: 28px;
+    }
+  }
+
+}
+
+.hero-name__inner {
+  width: 100%;
+  min-height: 506px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+
+  @media (max-width: $breakpoint768) {
+    min-height: 376px;
+  }
+}

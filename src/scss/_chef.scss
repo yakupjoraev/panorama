@@ -1,0 +1,121 @@
+.chef {
+  padding: 85px 0 100px;
+  background-color: var(--White);
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0;
+  }
+
+  // .chef__inner
+
+  &__inner {
+    display: flex;
+    column-gap: 60px;
+    color: var(--Dark, #302B27);
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: row-reverse;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+
+  // .chef__info
+
+  &__info {
+    h1 {
+      margin-bottom: 40px;
+      font-family: var(--secondary-font);
+      font-size: 85px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0.85px;
+
+      i {
+        font-style: italic;
+      }
+
+
+      @media (max-width: $breakpoint992) {
+        margin-bottom: 20px;
+        font-size: 35px;
+        letter-spacing: 0.35px;
+      }
+    }
+
+    p {
+      max-width: 755px;
+      margin-bottom: 28px;
+      letter-spacing: normal;
+
+      @media (max-width: $breakpoint992) {
+        max-width: 100%;
+        margin-bottom: 0;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  // .chef__label
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.18px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+
+  // .chef__label-border
+
+  &__label-border {
+    width: 95px;
+    min-width: 95px;
+    height: 1px;
+    background-color: var(--Light);
+  }
+
+  // .chef__accent
+
+  &__accent {
+    padding: 40px 45px;
+    border: 1px solid var(--Light, #AB8C6F);
+
+    p {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-top: 24px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 30px;
+      margin-top: 30px;
+    }
+  }
+
+  // .chef__picture
+
+  &__picture {
+
+    img {
+      @media (max-width: $breakpoint768) {
+        max-width: 100%;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Index</title>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -49,47 +50,59 @@
 
   <!-- Main Page -->
   <main class="main">
-    <section class="hero">
+    <section class="chef">
   <div class="container">
-    <div class="hero__inner">
-      <div class="hero__info">
-        <h1>
-          <i>Панорама</i> — ресторан европейской кухни
-        </h1>
+    <div class="chef__inner">
+      <div class="chef__info">
+        <div class="chef__label">
+          <div class="chef__label-border"></div>
 
-        <h2>Панорама вкусов и гастрономических открытий</h2>
-      </div>
-
-      <div class="hero__footer">
-        <div class="hero__links">
-          <a class="hero__link primary-btn" href="#">Забронировать стол</a>
-          <a class="hero__link secondary-btn" href="#">Меню ресторана</a>
+          Шеф-повар
         </div>
 
-        <div class="hero__connections">
-          <div class="hero__connection-one">
-            <div class="hero__connection-one-block">
-              <img src="./img/icons/location-pin-alt-1.svg" alt="location-pin">
+        <h1>Алексей <i>Муратов</i></h1>
 
-              <p>улица Советская, 54</p>
-            </div>
+        <p>Алексей родился в Саранске, получил профессиональное образование в местном кулинарном училище. Проходил
+          стажировки и приобретал бесценный опыт во многих ресторанах Саранска и Москвы.</p>
 
-            <div class="hero__connection-one-block">
-              <img src="./img/icons/clock-eight.svg" alt="clock-eight">
+        <p>Несколько лет он занимал должность су-шефа в столичном ресторане итальянской кухни Andiamo. После этого его
+          карьера продолжилась на позициях шеф-повара в кафе "Лесное" и повара в гастробаре "Академия".</p>
 
-              <p>с 06:30 до 00:00</p>
-            </div>
-          </div>
-          <div class="hero__connection-two">
-            <a class="hero__connection-two-link" href="#">
-              <img src="./img/icons/vk.svg" alt="vk">
-            </a>
-            <a class="hero__connection-two-link" href="#">
-              <img src="./img/icons/telegram.svg" alt="telegram">
-            </a>
-          </div>
+        <div class="chef__accent">
+          <p>В 2021 году Алексей Муратов начал работать в Panorama на должности су-шефа. Через 2 года он занял позицию
+            шеф-повара ресторана.</p>
         </div>
       </div>
+
+      <div class="chef__picture">
+        <picture>
+          <source media="(min-width: 991.98px)" srcset="./img/chef-pic.jpg" />
+          <source media="(min-width: 767.98px)" srcset="./img/chef-pic-2.jpg" />
+          <img src="./img/chef-pic-3.jpg" alt="chef Алексей Муратов">
+        </picture>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="brown-block">
+  <div class="container">
+    <div class="brown-block__inner">
+
+      <div class="brown-block__chef">
+        <h3>
+          Наша <i>профессиональная команда</i> поваров благодаря своим многогранным кулинарным талантам
+          <i>удивляет гостей</i>
+          Panorama <i>уникальным стилем</i> приготовления блюд и регулярными сезонными обновлениями меню.
+        </h3>
+
+        <div class="brown-block__chef-links">
+          <a class="brown-block__chef-link third-btn" href="#">Меню ресторана</a>
+          <a class="brown-block__chef-link primary-btn" href="#">Забронировать стол</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -169,6 +182,7 @@
 
 </body>
 
+<script src="./js/swiper-bundle.min.js"></script>
 <script src="./js/scripts.min.js"></script>
 
 </html>
