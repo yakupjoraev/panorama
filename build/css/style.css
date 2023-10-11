@@ -1482,6 +1482,7 @@ html {
   width: 100%;
   margin-bottom: 20px;
   outline: 0;
+  font-variant-numeric: lining-nums proportional-nums;
   color: var(--Primary, #38332D);
   font-family: var(--secondary-font);
   font-size: 24px;
@@ -1592,6 +1593,11 @@ html {
   line-height: normal;
 }
 
+.form__textarea {
+  resize: none;
+  height: 58px;
+}
+
 .form__footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1602,6 +1608,10 @@ html {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
+}
+
+.form__btn {
+  white-space: nowrap;
 }
 
 .form__political {
@@ -1618,6 +1628,129 @@ html {
 
 .form__political a:hover {
   text-decoration: underline;
+}
+
+.services {
+  padding: 230px 0 100px;
+}
+
+.services h3 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.85px;
+  color: var(--Dark, #302B27);
+}
+
+.services h3 i {
+  font-style: italic;
+}
+
+.services__inner ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 40px;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.services__inner ul li {
+  display: grid;
+  row-gap: 16px;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--Dark, #302B27);
+}
+
+.wedding {
+  position: relative;
+  padding: 100px 0 300px;
+  background-image: url("../img/wedding-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wedding h3 {
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.85px;
+  color: var(--White);
+}
+
+.wedding h3 i {
+  font-style: italic;
+}
+
+.wedding__block {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 315px;
+  max-width: 1335px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wedding__block-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 30px;
+  padding: 80px 15px 80px 80px;
+  background: var(--Primary, #38332D);
+}
+
+.wedding__block-info h4 {
+  font-family: var(--secondary-font);
+  font-size: 48px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--White, #FFF);
+}
+
+.wedding__block-info p {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--White, #FFF);
+}
+
+.wedding__block-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: var(--Light, #AB8C6F);
 }
 
 .footer {
@@ -2306,10 +2439,130 @@ html {
     color: var(--Dark, #302B27);
   }
 
+  .form__inner {
+    padding: 50px 30px;
+  }
+
   .form__inner h3 {
     margin-bottom: 34px;
     font-size: 35px;
     letter-spacing: 0.35px;
+  }
+
+  .form__groups--tablet-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .form__group {
+    margin-bottom: 20px;
+  }
+
+  .form__label {
+    font-size: 18px;
+  }
+
+  .form__input {
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .form__input::-webkit-input-placeholder {
+    font-size: 18px;
+  }
+
+  .form__input::-moz-placeholder {
+    font-size: 18px;
+  }
+
+  .form__input:-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  .form__input::-ms-input-placeholder {
+    font-size: 18px;
+  }
+
+  .form__input::placeholder {
+    font-size: 18px;
+  }
+
+  .form__footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .form__btn {
+    width: 100%;
+  }
+
+  .services {
+    padding: 150px 0 50px;
+  }
+
+  .services h3 {
+    margin-bottom: 40px;
+    font-size: 35px;
+    letter-spacing: 0.35px;
+  }
+
+  .services h3 br {
+    display: none;
+  }
+
+  .services__inner ul {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
+  }
+
+  .services__inner ul li {
+    grid-auto-flow: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-column-gap: 16px;
+       -moz-column-gap: 16px;
+            column-gap: 16px;
+    font-size: 16px;
+  }
+
+  .wedding {
+    padding: 50px 0 315px;
+  }
+
+  .wedding h3 {
+    margin-bottom: 40px;
+    font-size: 35px;
+    letter-spacing: 0.35px;
+  }
+
+  .wedding h3 br {
+    display: none;
+  }
+
+  .wedding__block {
+    grid-template-columns: 1fr;
+    max-width: 512px;
+  }
+
+  .wedding__block-info {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .wedding__block-info h4 {
+    font-size: 35px;
+  }
+
+  .wedding__block-picture {
+    display: none;
   }
 
   .footer__inner {
@@ -2561,6 +2814,53 @@ html {
     padding: 4px 16px;
     font-size: 12px;
     white-space: nowrap;
+  }
+
+  .form__inner {
+    padding: 50px 15px;
+  }
+
+  .form__groups {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .services {
+    padding: 270px 0 50px;
+  }
+
+  .services h3 {
+    margin-bottom: 30px;
+  }
+
+  .services__inner ul {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 20px;
+  }
+
+  .wedding {
+    padding: 50px 0 260px;
+  }
+
+  .wedding h3 {
+    margin-bottom: 30px;
+  }
+
+  .wedding__block {
+    bottom: -200px;
+    max-width: 100%;
+    padding: 0 30px;
+  }
+
+  .wedding__block-info {
+    padding: 16px;
+  }
+
+  .wedding__block-info h4 {
+    font-size: 28px;
+  }
+
+  .wedding__block-info p {
+    font-size: 16px;
   }
 
   .footer__inner {

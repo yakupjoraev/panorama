@@ -6,6 +6,14 @@
     padding: 70px 110px;
     background-color: var(--White, #FFF);
 
+    @media (max-width: $breakpoint992) {
+      padding: 50px 30px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: 50px 15px;
+    }
+
     h3 {
       margin-bottom: 40px;
       text-align: center;
@@ -40,6 +48,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15px;
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__groups--tablet-column {
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   // .form__group
@@ -50,6 +68,10 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 20px;
+    }
   }
 
   // .form__label
@@ -61,6 +83,10 @@
     font-size: 20px;
     font-weight: 400;
     line-height: normal;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 18px;
+    }
   }
 
   // .form__input
@@ -70,6 +96,7 @@
     margin-bottom: 20px;
     outline: 0;
 
+    font-variant-numeric: lining-nums proportional-nums;
     color: var(--Primary, #38332D);
     font-family: var(--secondary-font);
     font-size: 24px;
@@ -85,6 +112,15 @@
       font-weight: 500;
       line-height: normal;
       opacity: 0.3;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 15px;
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
     }
   }
 
@@ -141,7 +177,10 @@
 
   // .form__textarea
 
-  &__textarea {}
+  &__textarea {
+    resize: none;
+    height: 58px;
+  }
 
   // .form__footer
 
@@ -149,11 +188,24 @@
     display: flex;
     align-items: center;
     column-gap: 30px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
   }
 
   // .form__btn
 
-  &__btn {}
+  &__btn {
+    white-space: nowrap;
+
+    @media (max-width: $breakpoint992) {
+      width: 100%;
+    }
+  }
 
   // .form__political
 

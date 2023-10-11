@@ -147,3 +147,25 @@ function formCount() {
 }
 
 formCount();
+
+
+function phoneMask() {
+  const formContainer = document.querySelector('[data-form-container]');
+
+  if (!formContainer) {
+    return null
+  }
+
+  let formPhones = document.querySelectorAll('[data-form-phone]');
+
+  formPhones.forEach(formPhone => {
+
+    IMask(formPhone, {
+      mask: '+{7}(000)000-00-00'
+    }
+    )
+  });
+
+
+}
+phoneMask();
