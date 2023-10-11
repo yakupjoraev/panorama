@@ -1,0 +1,80 @@
+<section class="buffet">
+  <div class="buffet__inner">
+
+
+    <form action="#" class="form">
+      <div class="container">
+        <div class="form__inner">
+          <h3>Оставить <i>заявку </i></h3>
+
+          <div class="form__main">
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Имя и фамилия</label>
+                <input class="form__input" type="text" placeholder="Как можно к Вам обращаться?">
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Дата</label>
+                <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+                <div class="form__border"></div>
+              </div>
+
+            </div>
+
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Тип мероприятия</label>
+                <input class="form__input" type="text" placeholder="Например, свадьба">
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Количество гостей</label>
+                <div class="form__count minimum" data-form-count>
+                  <button type="button" class="form__count-minus" data-form-count-minus>
+                    <img src="./img/icons/minus.svg" alt="minus">
+                  </button>
+                  <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                  <button type="button" class="form__count-plus" data-form-count-plus>
+                    <img src="./img/icons/plus.svg" alt="plus">
+                  </button>
+                </div>
+                <div class="form__border"></div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Желаемый зал</label>
+              <input class="form__input" type="text" placeholder="Выберите зал">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Особые пожелания</label>
+                <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Контактный телефон</label>
+                <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __">
+                <div class="form__border"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__footer">
+            <button type="submit" class="form__btn third-btn">Отправить заявку</button>
+
+            <div class="form__political">
+              Нажимая на кнопку отправить вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

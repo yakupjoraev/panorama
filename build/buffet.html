@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header class="header">
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo"> <a href="#"> <img src="./img/header-logo.png" alt="logo"> </a> </div>
+        <ul class="menu">
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Новости</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Шеф-повар</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Меню</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Доставка</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Банкеты и фуршеты</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Кейтеринг</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Кондитерские изделия</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Отель</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Промо страница</a></li>
+          <li class="menu__item"><a href="#" class="menu__item-link" data-scroll>Контакты</a></li>
+        </ul>
+
+        <a class="navbar__basket" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="39" height="35" viewBox="0 0 39 35" fill="none">
+            <path
+              d="M35.1667 13.5833L32.2575 28.1289C31.8986 29.9234 31.7192 30.8206 31.2507 31.4918C30.8376 32.0836 30.2689 32.5498 29.6076 32.8388C28.8576 33.1666 27.9426 33.1666 26.1126 33.1666H12.8874C11.0574 33.1666 10.1424 33.1666 9.39243 32.8388C8.73106 32.5498 8.16243 32.0836 7.7493 31.4918C7.28081 30.8206 7.10136 29.9234 6.74247 28.1289L3.83333 13.5833M1.875 13.5833H37.125M11.6667 19.4583V19.4778M27.3333 19.4583V19.4778M7.75 13.5833L13.625 1.83325M31.25 13.5833L25.375 1.83325"
+              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+
+          <span class="header__basket-count">1</span>
+        </a>
+        <div class="burger">
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Main Page -->
+  <main class="main">
+    <section class="hero-name" style="background-image: url('./img/buffet-bg.jpg');">
+      <div class="container">
+        <div class="hero-name__inner">
+          <h1>
+            <i>Безграничные</i> возможности для реализации самых <i>смелых</i> фантазий, будь то камерное мероприятие
+            или событие <i>грандиозного</i> масштаба
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="buffet">
+  <div class="buffet__inner">
+
+
+    <form action="#" class="form">
+      <div class="container">
+        <div class="form__inner">
+          <h3>Оставить <i>заявку </i></h3>
+
+          <div class="form__main">
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Имя и фамилия</label>
+                <input class="form__input" type="text" placeholder="Как можно к Вам обращаться?">
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Дата</label>
+                <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+                <div class="form__border"></div>
+              </div>
+
+            </div>
+
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Тип мероприятия</label>
+                <input class="form__input" type="text" placeholder="Например, свадьба">
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Количество гостей</label>
+                <div class="form__count minimum" data-form-count>
+                  <button type="button" class="form__count-minus" data-form-count-minus>
+                    <img src="./img/icons/minus.svg" alt="minus">
+                  </button>
+                  <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                  <button type="button" class="form__count-plus" data-form-count-plus>
+                    <img src="./img/icons/plus.svg" alt="plus">
+                  </button>
+                </div>
+                <div class="form__border"></div>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Желаемый зал</label>
+              <input class="form__input" type="text" placeholder="Выберите зал">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__groups">
+              <div class="form__group">
+                <label class="form__label" for="">Особые пожелания</label>
+                <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+                <div class="form__border"></div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Контактный телефон</label>
+                <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __">
+                <div class="form__border"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__footer">
+            <button type="submit" class="form__btn third-btn">Отправить заявку</button>
+
+            <div class="form__political">
+              Нажимая на кнопку отправить вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a class="footer__logo" href="#">
+        <img src="./img/footer-logo.png" alt="logo">
+      </a>
+
+      <div class="footer__socials">
+        <p class="footer__socials-label">
+          Социальные сети:
+        </p>
+
+        <a class="footer__socials-link" href="#">
+          <img src="./img/footer-vk.svg" alt="vk">
+        </a>
+
+        <a class="footer__socials-link" href="#">
+          <img src="./img/footer-telegram.svg" alt="telegram">
+        </a>
+
+      </div>
+
+      <a class="footer__politycal" href="#" target="_blank">Договор оферта |<br> Политика конфиденциальности</a>
+
+      <nav class="footer__nav">
+        <a class="footer__nav-link" href="#">Главная</a>
+        <a class="footer__nav-link" href="#">Кейтеринг</a>
+        <a class="footer__nav-link" href="#">Новости</a>
+        <a class="footer__nav-link" href="#">Кондитерские изделия</a>
+        <a class="footer__nav-link" href="#">Шеф-повар</a>
+        <a class="footer__nav-link" href="#">Отель</a>
+        <a class="footer__nav-link" href="#">Меню</a>
+        <a class="footer__nav-link" href="#">Промо страница</a>
+        <a class="footer__nav-link" href="#">Доставка</a>
+        <a class="footer__nav-link" href="#">Контакты</a>
+        <a class="footer__nav-link" href="#">Банкеты и фуршеты</a>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="footer__contacts-group">
+          <h4 class="footer__contacts-lablel">
+            Телефон:
+          </h4>
+
+          <a class="footer__contacts-link" href="tel:+78342309825">+7 (834) 230 - 98 - 25</a>
+        </div>
+
+        <div class="footer__contacts-group">
+          <h4 class="footer__contacts-lablel">
+            Адрес:
+          </h4>
+
+          <a class="footer__contacts-link" href="#" target="_blank">
+            г. Саранск, ул. Советская, 54<br>
+            Radisson Hotel & Congress<br>
+            Center Saransk, 1 этаж
+          </a>
+        </div>
+
+        <div class="footer__contacts-group">
+          <h4 class="footer__contacts-lablel">
+            Ждем вас:
+          </h4>
+
+          <p class="footer__contacts-link">с 06:30 до 00:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<script src="./js/imask.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>

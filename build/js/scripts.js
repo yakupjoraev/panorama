@@ -81,3 +81,71 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+function dateInputs() {
+  // Получаем все элементы с атрибутом data-date-input
+  const dateInputs = document.querySelectorAll('[data-date-input]');
+
+  if (!dateInputs) {
+    return null
+  }
+
+  // Проходимся по каждому элементу и создаем для него экземпляр IMask
+  dateInputs.forEach(dateInput => {
+    IMask(dateInput, {
+      mask: Date,
+      min: new Date(2010, 0, 1),
+      max: new Date(2030, 0, 1),
+      lazy: true,
+    });
+  });
+
+}
+dateInputs();
+
+function formCount() {
+  // Получаем все элементы с атрибутом data-form-count
+  const countContainers = document.querySelectorAll('[data-form-count]');
+
+  if (!countContainers) {
+    return null
+  }
+
+  // Функция для обновления класса .minimum и значения счетчика
+  function updateCount(container) {
+    const countMinusButton = container.querySelector('[data-form-count-minus]');
+    const countPlusButton = container.querySelector('[data-form-count-plus]');
+    const countSumElement = container.querySelector('[data-form-count-sum]');
+    const countValue = parseInt(countSumElement.getAttribute('data-value'));
+
+    const minValue = 1;
+    let currentValue = parseInt(countSumElement.textContent);
+
+    countPlusButton.addEventListener('click', () => {
+      currentValue++;
+      updateCountValue();
+    });
+
+    countMinusButton.addEventListener('click', () => {
+      if (currentValue > minValue) {
+        currentValue--;
+        updateCountValue();
+      }
+    });
+
+    function updateCountValue() {
+      if (currentValue <= minValue) {
+        container.classList.add('minimum');
+      } else {
+        container.classList.remove('minimum');
+      }
+      countSumElement.textContent = currentValue;
+      countSumElement.setAttribute('data-value', currentValue); // Обновляем атрибут data-value
+    }
+  }
+
+  // Проходим по всем счетчикам и применяем функцию
+  countContainers.forEach(updateCount);
+}
+
+formCount();
+
