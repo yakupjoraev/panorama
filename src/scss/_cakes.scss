@@ -1,0 +1,258 @@
+.can-do {
+  padding: 100px 0;
+  background-color: var(--Light, #AB8C6F);
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0;
+  }
+
+  // .can-do__inner
+
+  &__inner {
+    display: flex;
+    column-gap: 88px;
+
+    @media (max-width: $breakpoint992) {
+      column-gap: 48px;
+    }
+
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+
+    h3 {
+      margin-bottom: 30px;
+      font-family: var(--secondary-font);
+      font-size: 85px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0.85px;
+
+      i {
+        font-style: italic;
+      }
+
+
+      @media (max-width: $breakpoint992) {
+        margin-bottom: 20px;
+        font-size: 35px;
+        letter-spacing: 0.35px;
+      }
+    }
+
+    p {
+      font-family: var(--primary-font);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+      color: var(--White, #FFF);
+
+      @media (max-width: $breakpoint992) {
+        font-size: 16px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+
+      @media (max-width: $breakpoint1450) {
+        height: fit-content;
+        max-width: 50%;
+        margin: auto 0;
+      }
+
+      @media (max-width: $breakpoint768) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // .can-do__info
+
+  &__info {}
+}
+
+
+.cakes-slider {
+  position: relative;
+
+  // .cakes-slider__wrapper
+
+  &__wrapper {}
+
+  // .cakes-slider__slide
+
+  &__slide {
+    margin-right: 0 !important;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  // .cakes-slider__arrow
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+
+    svg circle {
+      transition: 0.2s linear;
+    }
+
+    svg path {
+      transition: 0.2s linear;
+    }
+
+
+    &:hover {
+
+      svg circle {
+        fill: rgba(171, 140, 111, 1);
+        stroke: rgba(171, 140, 111, 1);
+      }
+
+      svg path {
+        stroke: rgba(171, 140, 111, 1);
+      }
+    }
+
+    &.swiper-button-disabled:hover {
+      svg circle {
+        fill: transparent
+      }
+
+      svg path {
+        stroke: transparent;
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      // display: none;
+    }
+
+    @media (max-width: $breakpoint768) {
+      svg {
+        max-width: 36px;
+      }
+    }
+  }
+
+  // .cakes-slider__arrow--prev
+
+  &__arrow--prev {
+    left: 20px;
+  }
+
+  // .cakes-slider__arrow--next
+
+  &__arrow--next {
+    right: 20px;
+  }
+}
+
+.children-cakes {
+  padding: 100px 0;
+
+  @media (max-width: $breakpoint992) {
+    padding: 50px 0;
+  }
+
+
+  // .children-cakes__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: 100px;
+    max-width: 1085px;
+    margin: 0 auto;
+
+    @media (max-width: $breakpoint992) {
+      row-gap: 50px;
+    }
+
+
+    p {
+      text-align: center;
+      font-family: var(--primary-font);
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: var(--Dark, #302B27);
+
+      @media (max-width: $breakpoint992) {
+        font-size: 18px;
+      }
+
+    }
+
+    h4 {
+      color: var(--Dark, #302B27);
+      text-align: center;
+      font-family: var(--secondary-font);
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    a {
+      text-align: center;
+      font-family: var(--primary-font);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 115%;
+      color: var(--Light, #AB8C6F);
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+      row-gap: 50px;
+      justify-items: center;
+      justify-content: space-between;
+
+      @media (max-width: $breakpoint992) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $breakpoint768) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+      }
+
+
+      li {
+        display: grid;
+        row-gap: 10px;
+        justify-items: center;
+        align-content: baseline;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.cakes-form {
+  margin-bottom: 100px;
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 50px;
+  }
+}

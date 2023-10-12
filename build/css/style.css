@@ -2200,6 +2200,185 @@ html {
   background: var(--Light, #AB8C6F);
 }
 
+.can-do {
+  padding: 100px 0;
+  background-color: var(--Light, #AB8C6F);
+}
+
+.can-do__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 88px;
+     -moz-column-gap: 88px;
+          column-gap: 88px;
+}
+
+.can-do__inner h3 {
+  margin-bottom: 30px;
+  font-family: var(--secondary-font);
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.85px;
+}
+
+.can-do__inner h3 i {
+  font-style: italic;
+}
+
+.can-do__inner p {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--White, #FFF);
+}
+
+.can-do__inner img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cakes-slider {
+  position: relative;
+}
+
+.cakes-slider__slide {
+  margin-right: 0 !important;
+}
+
+.cakes-slider__slide img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.cakes-slider__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+}
+
+.cakes-slider__arrow svg circle {
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.cakes-slider__arrow svg path {
+  -webkit-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+.cakes-slider__arrow:hover svg circle {
+  fill: #ab8c6f;
+  stroke: #ab8c6f;
+}
+
+.cakes-slider__arrow:hover svg path {
+  stroke: #ab8c6f;
+}
+
+.cakes-slider__arrow.swiper-button-disabled:hover svg circle {
+  fill: transparent;
+}
+
+.cakes-slider__arrow.swiper-button-disabled:hover svg path {
+  stroke: transparent;
+}
+
+.cakes-slider__arrow--prev {
+  left: 20px;
+}
+
+.cakes-slider__arrow--next {
+  right: 20px;
+}
+
+.children-cakes {
+  padding: 100px 0;
+}
+
+.children-cakes__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 100px;
+  max-width: 1085px;
+  margin: 0 auto;
+}
+
+.children-cakes__inner p {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--Dark, #302B27);
+}
+
+.children-cakes__inner h4 {
+  color: var(--Dark, #302B27);
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.children-cakes__inner a {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 115%;
+  color: var(--Light, #AB8C6F);
+}
+
+.children-cakes__inner a:hover {
+  text-decoration: underline;
+}
+
+.children-cakes__inner ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 50px;
+  justify-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.children-cakes__inner ul li {
+  display: grid;
+  row-gap: 10px;
+  justify-items: center;
+  -ms-flex-line-pack: baseline;
+      align-content: baseline;
+  text-align: center;
+}
+
+.cakes-form {
+  margin-bottom: 100px;
+}
+
 .footer {
   padding: 100px 0 108px;
   background-color: var(--Primary, #38332D);
@@ -2391,6 +2570,14 @@ html {
     -webkit-column-gap: 26px;
        -moz-column-gap: 26px;
             column-gap: 26px;
+  }
+
+  .can-do__inner img {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    max-width: 50%;
+    margin: auto 0;
   }
 }
 
@@ -3192,6 +3379,46 @@ html {
     display: none;
   }
 
+  .can-do {
+    padding: 50px 0;
+  }
+
+  .can-do__inner {
+    -webkit-column-gap: 48px;
+       -moz-column-gap: 48px;
+            column-gap: 48px;
+  }
+
+  .can-do__inner h3 {
+    margin-bottom: 20px;
+    font-size: 35px;
+    letter-spacing: 0.35px;
+  }
+
+  .can-do__inner p {
+    font-size: 16px;
+  }
+
+  .children-cakes {
+    padding: 50px 0;
+  }
+
+  .children-cakes__inner {
+    row-gap: 50px;
+  }
+
+  .children-cakes__inner p {
+    font-size: 18px;
+  }
+
+  .children-cakes__inner ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cakes-form {
+    margin-bottom: 50px;
+  }
+
   .footer__inner {
     grid-template-columns: repeat(2, 1fr);
     -webkit-column-gap: 60px;
@@ -3583,6 +3810,27 @@ html {
 
   .wedding__block-info p {
     font-size: 16px;
+  }
+
+  .can-do__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .can-do__inner img {
+    max-width: 100%;
+  }
+
+  .cakes-slider__arrow svg {
+    max-width: 36px;
+  }
+
+  .children-cakes__inner ul {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
   }
 
   .footer__inner {

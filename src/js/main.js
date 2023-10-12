@@ -208,3 +208,30 @@ function hallsSlider() {
   })
 }
 hallsSlider();
+
+function cakesSlider() {
+  const container = document.querySelector('.cakes-slider');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.cakes-slider', {
+    // Default parameters
+    slidesPerView: 1.2,
+    navigation: {
+      nextEl: ".cakes-slider__arrow--next",
+      prevEl: ".cakes-slider__arrow--prev",
+    },
+
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 4,
+      },
+    },
+  })
+}
+cakesSlider();
