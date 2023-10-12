@@ -170,3 +170,42 @@ function phoneMask() {
 
 }
 phoneMask();
+
+function terraceSlider() {
+  const container = document.querySelector('.terrace');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.terrace__slider', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".terrace__arrow--next",
+      prevEl: ".terrace__arrow--prev",
+    },
+  })
+}
+terraceSlider();
+
+
+function hallsSlider() {
+  const container = document.querySelector('.halls');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.halls__black-slider', {
+    // Default parameters
+    slidesPerView: 1,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".halls__black-arrow--next",
+      prevEl: ".halls__black-arrow--prev",
+    },
+  })
+}
+hallsSlider();
