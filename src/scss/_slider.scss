@@ -55,6 +55,8 @@
   // .slider__slide
 
   &__slide {
+    display: grid;
+    height: 100%;
     width: 425px;
 
     img {
@@ -94,6 +96,14 @@
       line-height: normal;
       letter-spacing: 0.16px;
       color: var(--Light, #AB8C6F);
+    }
+
+    a {
+      margin-top: auto;
+
+      &:hover {
+        color: var(--Dark);
+      }
     }
 
     @media (max-width: 1600px) {

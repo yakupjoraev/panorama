@@ -35,6 +35,11 @@
         font-style: italic;
       }
 
+      @media (max-width: 1200px) {
+        font-size: 50px;
+      }
+
+
 
       @media (max-width: $breakpoint992) {
         margin-bottom: 20px;
@@ -254,5 +259,14 @@
 
   @media (max-width: $breakpoint992) {
     margin-bottom: 50px;
+  }
+}
+
+.can-do--white {
+  background-color: #F3EFEC;
+  color: var(--Dark, #302B27);
+
+  p {
+    color: var(--Dark, #302B27);
   }
 }

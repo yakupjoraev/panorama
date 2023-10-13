@@ -54,3 +54,9 @@
     min-height: 376px;
   }
 }
+
+.hero-name__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
