@@ -98,6 +98,19 @@
     align-items: center;
     column-gap: 30px;
 
+    a {
+      font-size: 20px;
+      color: inherit;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.2px;
+      text-decoration-line: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
 
     @media (max-width: $breakpoint992) {
       column-gap: 10px;

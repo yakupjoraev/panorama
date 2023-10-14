@@ -264,6 +264,33 @@ function hotelHallsSlider() {
 }
 hotelHallsSlider();
 
+function foodSlider() {
+  const container = document.querySelector('.food-slider');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.food-slider', {
+    // Default parameters
+    slidesPerView: 1.2,
+    navigation: {
+      nextEl: ".food-slider__arrow--next",
+      prevEl: ".food-slider__arrow--prev",
+    },
+
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 4,
+      },
+    },
+  })
+}
+foodSlider();
+
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
   const container = document.querySelector('.tabs');
   if (!container) {
