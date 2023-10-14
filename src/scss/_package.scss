@@ -1,0 +1,146 @@
+.package {
+  margin: 100px 0;
+  color: #000;
+
+  @media (max-width: $breakpoint992) {
+    margin: 50px 0;
+  }
+
+  h4 {
+    margin-bottom: 5px;
+    font-family: var(--secondary-font);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    i {
+      font-style: italic;
+    }
+
+    @media (max-width: $breakpoint992) {
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+  }
+
+  p {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding-left: 16px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 2px;
+    }
+  }
+
+  ul li {
+    list-style: disc;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.2px;
+    color: var(--Dark, #302B27);
+
+    @media (max-width: $breakpoint992) {
+      font-size: 16px;
+      letter-spacing: 0.16px;
+    }
+  }
+
+  // .package__inner
+
+  &__inner {
+    display: flex;
+    column-gap: 40px;
+
+    @media (max-width: $breakpoint992) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  // .package__pictures
+
+  &__pictures {
+    flex: 0 1 425px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      object-position: center;
+
+      @media (max-width: $breakpoint992) {
+        height: 480px;
+      }
+
+      @media (max-width: $breakpoint768) {
+        height: 280px;
+      }
+    }
+
+    a {
+      width: 100%;
+      background-color: #8ABED1;
+      border-color: #8ABED1;
+
+      white-space: nowrap;
+
+      &:hover {
+        background-color: var(--Light);
+      }
+    }
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .package__info
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+
+    flex: 0 1 620px;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 20px;
+    }
+  }
+
+  // .package__info-label
+
+  &__info-label {
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+    color: #8ABED1;
+  }
+}

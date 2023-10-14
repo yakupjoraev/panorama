@@ -225,3 +225,24 @@
     }
   }
 }
+
+.form__group-added {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  background-color: transparent;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .form__label {
+    margin: 0;
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 20px;
+  }
+
+}

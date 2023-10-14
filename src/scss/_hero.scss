@@ -191,3 +191,51 @@
     }
   }
 }
+
+.hero-secondary {
+  margin-top: -142px;
+  background-image: url('../img/hotel-hero-bg.jpg');
+
+  @media (max-width: $breakpoint992) {
+    margin-top: -70px;
+    padding: 150px 0 70px;
+  }
+
+  .hero__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 70px;
+    text-align: center;
+    margin: 0 auto 70px;
+
+    @media (max-width: $breakpoint768) {
+      row-gap: 30px;
+      margin-bottom: 96px;
+    }
+
+    img {
+      width: 320px;
+
+      @media (max-width: $breakpoint768) {
+        width: 220px;
+      }
+    }
+
+    a {
+      margin: 0 auto;
+      background-color: #8ABED1;
+
+      @media (max-width: $breakpoint768) {
+        width: 100%;
+      }
+    }
+  }
+
+  .hero__connections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

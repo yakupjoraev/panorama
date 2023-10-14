@@ -236,7 +236,39 @@ function cakesSlider() {
 }
 cakesSlider();
 
+function hotelHallsSlider() {
+  const container = document.querySelector('.hotel-halls-slider');
+
+  if (!container) {
+    return null
+  }
+
+  const swiper = new Swiper('.hotel-halls-slider', {
+    // Default parameters
+    slidesPerView: 1.2,
+    navigation: {
+      nextEl: ".hotel-halls-slider__arrow--next",
+      prevEl: ".hotel-halls-slider__arrow--prev",
+    },
+
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 4,
+      },
+    },
+  })
+}
+hotelHallsSlider();
+
 function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
+  const container = document.querySelector('.tabs');
+  if (!container) {
+    return null
+  }
+
   const header = document.querySelector(headerSelector),
     tab = document.querySelectorAll(tabSelector),
     content = document.querySelectorAll(contentSelector)
@@ -272,4 +304,31 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 // ВТОРОЙ аргумент - класс конкретного элемента, при клике на который будет переключатся таб.
 // ТРЕТИЙ аргумент - класс того блока, который будет переключаться.
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
-tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active')
+tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+
+
+
+const openModalBtns = document.querySelectorAll('.open-modal-btn');
+const closeModalBtns = document.querySelectorAll('.close-modal-btn');
+const modals = document.querySelectorAll('.modal');
+
+openModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.dataset.modalId;
+    const modal = document.getElementById(modalId);
+    modal.classList.add('show');
+  });
+});
+
+closeModalBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modal = btn.closest('.modal');
+    modal.classList.remove('show');
+  });
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target.classList.contains('modal')) {
+    event.target.classList.remove('show');
+  }
+});

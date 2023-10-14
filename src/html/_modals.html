@@ -1,0 +1,87 @@
+<!-- Modal -->
+<div class="modals-wrapper">
+  <button class="open-modal-btn" data-modal-id="book">Open Modal Забронировать предложение</button>
+  <div class="modal modal-book" id="book">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="modal-book__inner">
+        <form action="#" class="form" data-form-container>
+          <div class="form__inner">
+            <h3>Забронировать <i>предложение</i></h3>
+
+            <div class="form__main">
+              <div class="form__groups form__groups--tablet-column">
+                <div class="form__group">
+                  <label class="form__label" for="">ФИО проживающего</label>
+                  <input class="form__input" type="text" placeholder="Ваши данные">
+                  <div class="form__border"></div>
+                </div>
+
+                <button type="button" class="form__group-added">
+                  <img src="img/form-added.png" alt="">
+
+                  <span class="form__label">Добавить проживающего</span>
+                </button>
+
+              </div>
+
+              <div class="form__groups">
+                <div class="form__group">
+                  <label class="form__label" for="">Контактный телефон</label>
+                  <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __" data-form-phone>
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Пакетное предложение</label>
+                  <input class="form__input" type="text" placeholder="Пакетное предложение" value="Семейный пакет">
+                  <div class="form__border"></div>
+                </div>
+              </div>
+
+              <div class="form__groups form__groups--tablet-column">
+                <div class="form__group">
+                  <label class="form__label" for="">Дата</label>
+                  <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Категория номера</label>
+                  <input class="form__input" type="text" placeholder="Люкс">
+                  <div class="form__border"></div>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Особые пожелания</label>
+                <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+                <div class="form__border"></div>
+              </div>
+            </div>
+
+            <div class="form__footer">
+              <button type="submit" class="form__btn third-btn">Отправить заявку</button>
+
+              <div class="form__political">
+                Нажимая на кнопку отправить вы соглашаетесь с <a href="#" target="_blank">политикой
+                  конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="modal2">Open Modal 2</button>
+  <div class="modal" id="modal2">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+      <h2>Modal 2 Title</h2>
+      <p>Modal 2 content goes here.</p>
+      <button class="close-modal-btn">Close Modal</button>
+    </div>
+  </div>
+</div>
