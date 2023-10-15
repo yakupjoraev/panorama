@@ -183,6 +183,10 @@
 
   &__connection-two-link {
 
+    &:hover {
+      opacity: 0.8;
+    }
+
     @media (max-width: $breakpoint992) {
       img {
         width: 40px;
