@@ -127,13 +127,257 @@
     </div>
   </div>
 
-  <button class="open-modal-btn" data-modal-id="modal2">Open Modal 2</button>
-  <div class="modal" id="modal2">
+  <button class="open-modal-btn" data-modal-id="book-table">Open Modal Бронь стола окно</button>
+  <div class="modal book-table" id="book-table">
     <div class="modal-content">
       <span class="close-modal-btn">&times;</span>
-      <h2>Modal 2 Title</h2>
-      <p>Modal 2 content goes here.</p>
-      <button class="close-modal-btn">Close Modal</button>
+
+      <div class="book-table__inner">
+        <form action="#" class="form" data-form-container>
+          <div class="form__inner">
+            <h3>Забронировать <i>стол </i></h3>
+
+            <div class="form__main">
+              <div class="form__groups form__groups--tablet-column">
+                <div class="form__group">
+                  <label class="form__label" for="">Имя и фамилия</label>
+                  <input class="form__input" type="text" placeholder="Как можно к Вам обращаться?">
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Дата</label>
+                  <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+                  <div class="form__border"></div>
+                </div>
+
+              </div>
+
+              <div class="form__groups">
+
+                <div class="form__group">
+                  <label class="form__label" for="">Количество гостей</label>
+                  <div class="form__count minimum" data-form-count>
+                    <button type="button" class="form__count-minus" data-form-count-minus>
+                      <img src="./img/icons/minus.svg" alt="minus">
+                    </button>
+                    <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                    <button type="button" class="form__count-plus" data-form-count-plus>
+                      <img src="./img/icons/plus.svg" alt="plus">
+                    </button>
+                  </div>
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Контактный телефон</label>
+                  <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __" data-form-phone>
+                  <div class="form__border"></div>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Особые пожелания</label>
+                <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+                <div class="form__border"></div>
+              </div>
+
+            </div>
+
+            <div class="form__footer">
+              <button type="submit" class="form__btn third-btn">Отправить заявку</button>
+
+              <div class="form__political">
+                Нажимая на кнопку отправить вы соглашаетесь с <a href="#" target="_blank">политикой
+                  конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="modal-menu">Open Modal Menu</button>
+  <div class="modal book-table" id="modal-menu">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="book-table__inner">
+        <form action="#" class="form" data-form-container>
+          <div class="form__inner">
+            <h3>Оставить <i>заявку </i></h3>
+
+            <div class="menu-page__menu">
+              <a href="#">
+                <img src="./img/menu-page/1.jpg" alt="">
+
+                <h3>
+                  Меню À La Carte
+
+                  <img src="./img/icons/arrow-up-right-from-square.svg" alt="">
+                </h3>
+              </a>
+
+              <a href="#">
+                <img src="./img/menu-page/2.jpg" alt="">
+
+                <h3>
+                  Бар
+
+                  <img src="./img/icons/arrow-up-right-from-square.svg" alt="">
+                </h3>
+              </a>
+
+              <a href="#">
+                <img src="./img/menu-page/3.jpg" alt="">
+
+                <h3>
+                  Винная карта
+
+                  <img src="./img/icons/arrow-up-right-from-square.svg" alt="">
+                </h3>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="book-catering">Open Modal Заявка на кейтеринг</button>
+  <div class="modal book-table" id="book-catering">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="book-table__inner">
+        <form action="#" class="form" data-form-container>
+          <div class="form__inner">
+            <h3>Заявка на <i>выездной кейтеринг</i></h3>
+
+            <div class="form__main">
+              <div class="form__groups form__groups--tablet-column">
+                <div class="form__group">
+                  <label class="form__label" for="">Имя и фамилия</label>
+                  <input class="form__input" type="text" placeholder="Как можно к Вам обращаться?">
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Дата</label>
+                  <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+                  <div class="form__border"></div>
+                </div>
+
+              </div>
+
+              <div class="form__groups">
+
+                <div class="form__group">
+                  <label class="form__label" for="">Количество гостей</label>
+                  <div class="form__count minimum" data-form-count>
+                    <button type="button" class="form__count-minus" data-form-count-minus>
+                      <img src="./img/icons/minus.svg" alt="minus">
+                    </button>
+                    <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                    <button type="button" class="form__count-plus" data-form-count-plus>
+                      <img src="./img/icons/plus.svg" alt="plus">
+                    </button>
+                  </div>
+                  <div class="form__border"></div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="">Контактный телефон</label>
+                  <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __" data-form-phone>
+                  <div class="form__border"></div>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="">Особые пожелания</label>
+                <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+                <div class="form__border"></div>
+              </div>
+
+            </div>
+
+            <div class="form__footer">
+              <button type="submit" class="form__btn third-btn">Отправить заявку</button>
+
+              <div class="form__political">
+                Нажимая на кнопку отправить вы соглашаетесь с <a href="#" target="_blank">политикой
+                  конфиденциальности</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="advertising-window">Open Modal Окно реклама</button>
+  <div class="modal book-table advertising-window" id="advertising-window">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="advertising-window__inner">
+        <div class="advertising-window__picture">
+          <img src="./img/news-detail__top-pic.jpg" alt="">
+        </div>
+
+        <div class="advertising-window__info">
+          <time>20.06.2023</time>
+          <h4>GastroТур в Африку</h4>
+
+          <p>
+            Гастрономический ужин, посвященный кухне ЮАР от шеф-повара Алексея Муратова на летней террасе Panorama
+            Lounge
+          </p>
+
+          <a class="primary-btn" href="#">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  /******************/
+
+
+  <button class="open-modal-btn" data-modal-id="basket-window">Open Modal Basket пустая корзина</button>
+  <div class="modal basket-window" id="basket-window">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="basket-window__inner">
+        <h3><i>Корзина</i></h3>
+
+        <div class="basket-window__attention">
+          Ваша корзина пуста. Добавьте блюда со страницы <a href="#">Доставка</a>, чтобы иметь возможность совершить
+          заказ на сайте.
+        </div>
+
+        <a class="basket-window__link primary-btn" href="#">Посмотреть блюда</a>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="basket-pickup-window">Open Modal Basket только самовывоз</button>
+  <div class="modal basket-window" id="basket-window">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="basket-window__inner">
+        <h3><i>Корзина</i></h3>
+
+        <div class="basket-window__attention">
+          Ваша корзина пуста. Добавьте блюда со страницы <a href="#">Доставка</a>, чтобы иметь возможность совершить
+          заказ на сайте.
+        </div>
+
+        <a class="basket-window__link primary-btn" href="#">Посмотреть блюда</a>
+      </div>
     </div>
   </div>
 </div>
