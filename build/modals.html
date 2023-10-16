@@ -364,19 +364,230 @@
   </div>
 
   <button class="open-modal-btn" data-modal-id="basket-pickup-window">Open Modal Basket только самовывоз</button>
-  <div class="modal basket-window" id="basket-window">
+  <div class="modal basket-window" id="basket-pickup-window">
     <div class="modal-content">
       <span class="close-modal-btn">&times;</span>
 
       <div class="basket-window__inner">
         <h3><i>Корзина</i></h3>
 
-        <div class="basket-window__attention">
-          Ваша корзина пуста. Добавьте блюда со страницы <a href="#">Доставка</a>, чтобы иметь возможность совершить
-          заказ на сайте.
-        </div>
+        <form class="basket-window__form" action="#">
+          <ul class="basket-window__list">
+            <li class="basket-window__item">
+              <div class="basket-window__item-picture">
+                <img src="./img/delivery/3.jpg" alt="">
+              </div>
 
-        <a class="basket-window__link primary-btn" href="#">Посмотреть блюда</a>
+              <div class="basket-window__item-info">
+                <div class="basket-window__item-header">
+                  <div class="basket-window__item-naming">
+                    <h4 class="basket-window__item-title">Ростбиф с рукколой и кунжутным соусом</h4>
+                    <p class="basket-window__item-descr">100/15/50 г</p>
+                  </div>
+
+                  <button type="button" class="basket-window__item-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 4L12 12M12 4L4 12" stroke="#302B27" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <span>Удалить</span>
+                  </button>
+                </div>
+
+                <div class="basket-window__item-footer">
+                  <p class="basket-window__item-price">Стоимость 600 ₽</p>
+
+                  <div class="basket-window__item-counts">
+                    <div class="form__group">
+                      <div class="form__count minimum" data-form-count>
+                        <button type="button" class="form__count-minus" data-form-count-minus>
+                          <img src="./img/icons/minus.svg" alt="minus">
+                        </button>
+                        <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                        <button type="button" class="form__count-plus" data-form-count-plus>
+                          <img src="./img/icons/plus.svg" alt="plus">
+                        </button>
+                      </div>
+                      <div class="form__border"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="basket-window__item">
+              <div class="basket-window__item-picture">
+                <img src="./img/delivery/9.jpg" alt="">
+                <div class="basket-window__item-label">NEW</div>
+              </div>
+
+              <div class="basket-window__item-info">
+                <div class="basket-window__item-header">
+                  <div class="basket-window__item-naming">
+                    <h4 class="basket-window__item-title">Грибы соленые грузди</h4>
+                    <p class="basket-window__item-descr">150/30 г</p>
+                  </div>
+
+                  <button type="button" class="basket-window__item-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 4L12 12M12 4L4 12" stroke="#302B27" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <span>Удалить</span>
+                  </button>
+                </div>
+
+                <div class="basket-window__item-footer">
+                  <p class="basket-window__item-price">Стоимость 350 ₽</p>
+
+                  <div class="basket-window__item-counts">
+                    <div class="form__group">
+                      <div class="form__count minimum" data-form-count>
+                        <button type="button" class="form__count-minus" data-form-count-minus>
+                          <img src="./img/icons/minus.svg" alt="minus">
+                        </button>
+                        <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                        <button type="button" class="form__count-plus" data-form-count-plus>
+                          <img src="./img/icons/plus.svg" alt="plus">
+                        </button>
+                      </div>
+                      <div class="form__border"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="basket-window__form-footer">
+            <div class="basket-window__sums">
+              <p class="basket-window__sum-label">Сумма заказа </p>
+              <div class="basket-window__sum">950 ₽</div>
+            </div>
+
+            <button type="button" class="basket-window__btn primary-btn">Оформить заказ</button>
+          </div>
+        </form>
+
+        <div class="basket-window__attention">
+          <span> Внимание!</span> Бесплатная доставка курьером доступна для заказов на сумму от <b>1000 ₽</b>, для
+          оформления бесплатной доставки курьером добавьте товары в корзину на сумму <b>50 ₽</b> или выберите способ
+          доставки самовывоз при оформлении заказа.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="basket-pickup-available-window">Open Modal Basket доставка
+    доступна</button>
+  <div class="modal basket-window" id="basket-pickup-available-window">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="basket-window__inner">
+        <h3><i>Корзина</i></h3>
+
+        <form class="basket-window__form" action="#">
+          <ul class="basket-window__list">
+            <li class="basket-window__item">
+              <div class="basket-window__item-picture">
+                <img src="./img/delivery/3.jpg" alt="">
+              </div>
+
+              <div class="basket-window__item-info">
+                <div class="basket-window__item-header">
+                  <div class="basket-window__item-naming">
+                    <h4 class="basket-window__item-title">Ростбиф с рукколой и кунжутным соусом</h4>
+                    <p class="basket-window__item-descr">100/15/50 г</p>
+                  </div>
+
+                  <button type="button" class="basket-window__item-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 4L12 12M12 4L4 12" stroke="#302B27" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <span>Удалить</span>
+                  </button>
+                </div>
+
+                <div class="basket-window__item-footer">
+                  <p class="basket-window__item-price">Стоимость 600 ₽</p>
+
+                  <div class="basket-window__item-counts">
+                    <div class="form__group">
+                      <div class="form__count minimum" data-form-count>
+                        <button type="button" class="form__count-minus" data-form-count-minus>
+                          <img src="./img/icons/minus.svg" alt="minus">
+                        </button>
+                        <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                        <button type="button" class="form__count-plus" data-form-count-plus>
+                          <img src="./img/icons/plus.svg" alt="plus">
+                        </button>
+                      </div>
+                      <div class="form__border"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="basket-window__item">
+              <div class="basket-window__item-picture">
+                <img src="./img/delivery/9.jpg" alt="">
+                <div class="basket-window__item-label">NEW</div>
+              </div>
+
+              <div class="basket-window__item-info">
+                <div class="basket-window__item-header">
+                  <div class="basket-window__item-naming">
+                    <h4 class="basket-window__item-title">Грибы соленые грузди</h4>
+                    <p class="basket-window__item-descr">150/30 г</p>
+                  </div>
+
+                  <button type="button" class="basket-window__item-delete">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M4 4L12 12M12 4L4 12" stroke="#302B27" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    <span>Удалить</span>
+                  </button>
+                </div>
+
+                <div class="basket-window__item-footer">
+                  <p class="basket-window__item-price">Стоимость 350 ₽</p>
+
+                  <div class="basket-window__item-counts">
+                    <div class="form__group">
+                      <div class="form__count minimum" data-form-count>
+                        <button type="button" class="form__count-minus" data-form-count-minus>
+                          <img src="./img/icons/minus.svg" alt="minus">
+                        </button>
+                        <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+                        <button type="button" class="form__count-plus" data-form-count-plus>
+                          <img src="./img/icons/plus.svg" alt="plus">
+                        </button>
+                      </div>
+                      <div class="form__border"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="basket-window__form-footer">
+            <div class="basket-window__sums">
+              <p class="basket-window__sum-label">Сумма заказа </p>
+              <div class="basket-window__sum">950 ₽</div>
+            </div>
+
+            <button type="button" class="basket-window__btn primary-btn">Оформить заказ</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
