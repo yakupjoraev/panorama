@@ -44,12 +44,12 @@
   // .contacts__main
 
   &__main {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    height: 520px;
     margin-bottom: 48px;
 
     @media (max-width: $breakpoint992) {
-      height: 380px;
+      height: 390px;
     }
 
     @media (max-width: $breakpoint768) {
@@ -63,18 +63,22 @@
 
   &__map {
     position: relative;
+    flex: 0 1 755px;
 
     &>img {
       max-width: 100%;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
 
       @media (max-width: $breakpoint992) {
-        height: 380px;
+        height: 390px;
         object-fit: cover;
       }
 
       @media (max-width: $breakpoint768) {
         height: 100%;
+        flex: 0 1 auto;
       }
 
     }
@@ -105,6 +109,7 @@
     flex-direction: column;
     height: 100%;
     padding: 50px;
+    flex: 0 1 550px;
 
     background-color: var(--Light, #AB8C6F);
 
@@ -113,6 +118,9 @@
       flex: 0 1 50%;
     }
 
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+    }
   }
 
   // .contacts__info-group
@@ -191,7 +199,7 @@
 
     ul {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr 1fr 130px 1fr;
       column-gap: 50px;
       row-gap: 50px;
 

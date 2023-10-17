@@ -361,3 +361,11 @@ window.addEventListener('click', (event) => {
   }
 });
 
+
+$(function () {
+  $('[data-select-input]').each(function () {
+    const selectmenuInstance = $(this).selectmenu();
+    console.log(selectmenuInstance);
+  });
+});
+

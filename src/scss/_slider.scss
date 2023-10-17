@@ -45,6 +45,8 @@
   // .slider__wrapper
 
   &__wrapper {
+    display: grid;
+    grid-auto-flow: column;
     margin-bottom: 40px;
 
     @media (max-width: $breakpoint992) {
@@ -103,6 +105,10 @@
 
       &:hover {
         color: var(--Dark);
+      }
+
+      @media (max-width: $breakpoint992) {
+        width: 100%;
       }
     }
 

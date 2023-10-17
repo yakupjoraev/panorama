@@ -3,7 +3,12 @@
   <button class="open-modal-btn" data-modal-id="book">Open Modal Забронировать предложение</button>
   <div class="modal modal-book" id="book">
     <div class="modal-content">
-      <span class="close-modal-btn">&times;</span>
+      <span class="close-modal-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M4 4L20 20M20 4L4 20" stroke="#8ABED1" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </span>
 
       <div class="modal-book__inner">
         <form action="#" class="form" data-form-container>
@@ -34,10 +39,19 @@
                 </div>
 
                 <div class="form__group">
-                  <label class="form__label" for="">Пакетное предложение</label>
-                  <input class="form__input" type="text" placeholder="Пакетное предложение" value="Семейный пакет">
+                  <label class="form__label" for="select1">Пакетное предложение</label>
+                  <select class="form__input form__input-select" name="select1" data-select-input>
+                    <option>Пакетное предложение1</option>
+                    <option>Пакетное предложение2</option>
+                    <option selected="selected">Семейный пакет</option>
+                    <option>Пакетное предложение4</option>
+                    <option>Пакетное предложение5</option>
+                  </select>
+
                   <div class="form__border"></div>
                 </div>
+
+
               </div>
 
               <div class="form__groups form__groups--tablet-column">
@@ -48,8 +62,15 @@
                 </div>
 
                 <div class="form__group">
-                  <label class="form__label" for="">Категория номера</label>
-                  <input class="form__input" type="text" placeholder="Люкс">
+                  <label class="form__label" for="select2">Категория номера</label>
+
+                  <select class="form__input form__input-select" name="select2" data-select-input>
+                    <option>Люкс1</option>
+                    <option>Люкс2</option>
+                    <option selected="selected">Люкс</option>
+                    <option>Люкс4</option>
+                    <option>Люкс5</option>
+                  </select>
                   <div class="form__border"></div>
                 </div>
               </div>
@@ -536,6 +557,305 @@
             <button type="button" class="basket-window__btn primary-btn">Оформить заказ</button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <button class="open-modal-btn" data-modal-id="order-pickup">Open Modal Оформление заказа самовывоз</button>
+  <div class="modal basket-window" id="order-pickup">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="basket-window__inner">
+        <h3><i>Оформление заказа</i></h3>
+        <a class="basket-window__back" href="#">
+          <img src="./img/icons/basket-window-back.svg" alt="Назад в корзину">
+
+          Назад в корзину
+        </a>
+
+        <form class="basket-window__form" action="#">
+          <h4>Выберите способ доставки</h4>
+
+          <div class="form__radioes">
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="delivery-method" id="delivery-method1" checked>
+
+              <label class="form__radio-label" for="delivery-method1">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Самовывоз</div>
+                <div class="form__radio-discont">-10%</div>
+              </label>
+            </div>
+
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="delivery-method" id="delivery-method2" disabled>
+
+              <label class="form__radio-label" for="delivery-method2">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Доставка курьером</div>
+                <div class="form__radio-clue">Бесплатная доставка курьером доступна для заказов на сумму от 1000 ₽, для
+                  оформления бесплатной доставки курьером добавьте товары в корзину на сумму 50 ₽</div>
+              </label>
+            </div>
+          </div>
+
+          <h4>Введите ваши данные</h4>
+
+          <div class="form__groups">
+            <div class="form__group">
+              <label class="form__label" for="">ФИО проживающего</label>
+              <input class="form__input" type="text" placeholder="Ваши данные">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Контактный телефон</label>
+              <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __" data-form-phone>
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+
+          <h4>Когда вы хотите забрать заказ?</h4>
+          <div class="form__groups">
+            <div class="form__group">
+              <label class="form__label" for="">Желаемая дата*</label>
+              <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Желаемое время*</label>
+              <input class="form__input" type="text" placeholder="*" value="Как можно быстрее">
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+          <h4>Выберите способ оплаты</h4>
+
+          <div class="form__radioes">
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="payment-method" id="payment-method1" checked>
+
+              <label class="form__radio-label" for="payment-method1">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Оплата онлайн картой</div>
+              </label>
+            </div>
+
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="payment-method" id="payment-method2">
+
+              <label class="form__radio-label" for="payment-method2">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Наличными в ресторане</div>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="form__group">
+            <label class="form__label" for="">Особые пожелания</label>
+            <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+            <div class="form__border"></div>
+          </div>
+
+          <div class="basket-window__form-footer form__groups--tablet-column">
+            <div class="basket-window__sums">
+              <p class="basket-window__sum-label">Сумма к оплате с учетом скидки 10%</p>
+              <div class="basket-window__sum">
+                950 ₽ <strike>950 ₽</strike>
+              </div>
+            </div>
+
+            <button type="button" class="basket-window__btn primary-btn">Перейти к оплате</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="order-courier">Open Modal Оформление заказа курьер</button>
+  <div class="modal basket-window" id="order-courier">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="basket-window__inner">
+        <h3><i>Оформление заказа</i></h3>
+        <a class="basket-window__back" href="#">
+          <img src="./img/icons/basket-window-back.svg" alt="Назад в корзину">
+
+          Назад в корзину
+        </a>
+
+        <form class="basket-window__form" action="#">
+          <h4>Выберите способ доставки</h4>
+
+          <div class="form__radioes">
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="delivery-method-2" id="delivery-method3">
+
+              <label class="form__radio-label" for="delivery-method3">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Самовывоз</div>
+                <div class="form__radio-discont">-10%</div>
+              </label>
+            </div>
+
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="delivery-method-2" id="delivery-method4" checked>
+
+              <label class="form__radio-label" for="delivery-method4">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Доставка курьером</div>
+              </label>
+            </div>
+          </div>
+
+          <h4>Введите ваши данные</h4>
+
+          <div class="form__groups">
+            <div class="form__group">
+              <label class="form__label" for="">Ваше имя*</label>
+              <input class="form__input" type="text" placeholder="Ваши данные">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Контактный телефон*</label>
+              <input class="form__input" type="tel" placeholder="+7 (___) ___ __ __" data-form-phone>
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+
+          <h4>Когда вы хотите забрать заказ?</h4>
+
+          <div class="form__groups">
+            <div class="form__group">
+              <label class="form__label" for="">Желаемая дата*</label>
+              <input class="form__input" type="text" placeholder="ДД.ММ.ГГГГ" data-date-input>
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Желаемое время*</label>
+              <input class="form__input" type="text" placeholder="*" value="Как можно быстрее">
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+          <h4>Куда курьеру доставить заказ?</h4>
+
+          <div class="form__groups">
+            <div class="form__group">
+              <label class="form__label" for="">Улица*</label>
+              <input class="form__input" type="text" placeholder="Введите улицу">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Дом*</label>
+              <input class="form__input" type="number" placeholder="Номер дома">
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+          <div class="form__groups form__groups--tripl">
+            <div class="form__group">
+              <label class="form__label" for="">Подъезд</label>
+              <input class="form__input" type="number" placeholder="Номер подъезда">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Этаж</label>
+              <input class="form__input" type="number" placeholder="Введите этаж">
+              <div class="form__border"></div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="">Квартира</label>
+              <input class="form__input" type="number" placeholder="Номер квартиры">
+              <div class="form__border"></div>
+            </div>
+          </div>
+
+
+          <h4>Выберите способ оплаты</h4>
+
+          <div class="form__radioes">
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="payment-method-2" id="payment-method3" checked>
+
+              <label class="form__radio-label" for="payment-method3">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Оплата онлайн картой</div>
+              </label>
+            </div>
+
+            <div class="form__radio-group">
+              <input class="form__radio-input" type="radio" name="payment-method-2" id="payment-method4">
+
+              <label class="form__radio-label" for="payment-method4">
+                <div class="form__radio-decor"></div>
+                <div class="form__radio-text">Наличными в ресторане</div>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="form__group">
+            <label class="form__label" for="">Особые пожелания</label>
+            <textarea class="form__input form__textarea" placeholder="Ваш комментарий"></textarea>
+            <div class="form__border"></div>
+          </div>
+
+          <div class="basket-window__form-footer form__groups--tablet-column">
+            <div class="basket-window__sums">
+              <p class="basket-window__sum-label">Сумма к оплате</p>
+              <div class="basket-window__sum">
+                1300 ₽
+              </div>
+            </div>
+
+            <button type="button" class="basket-window__btn primary-btn">Перейти к оплате</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <button class="open-modal-btn" data-modal-id="successfully-completed">Open Modal Заказ успешно оформлен.</button>
+  <div class="modal successfully-completed" id="successfully-completed">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="successfully-completed__inner">
+        <h5>УСПЕШНО</h5>
+        <h4>Заказ успешно оформлен.</h4>
+        <p>Спасибо за ваш заказ! Наш менеджер свяжется с вами для подтверждения в самое ближайшее время!</p>
+
+        <span class="close-modal-btn primary-btn">Закрыть окно</span>
+      </div>
+    </div>
+  </div>
+
+
+  <button class="open-modal-btn" data-modal-id="successfully-completed-paid">Open Modal Заказ успешно оформлен.</button>
+  <div class="modal successfully-completed" id="successfully-completed-paid">
+    <div class="modal-content">
+      <span class="close-modal-btn">&times;</span>
+
+      <div class="successfully-completed__inner">
+        <h5>УСПЕШНО</h5>
+        <h4>Заказ успешно оформлен и оплачен</h4>
+        <p>Спасибо за ваш заказ! Наш менеджер свяжется с вами для подтверждения в самое ближайшее время!</p>
+
+        <span class="close-modal-btn primary-btn">Закрыть окно</span>
       </div>
     </div>
   </div>

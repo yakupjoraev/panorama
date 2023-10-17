@@ -359,3 +359,11 @@ window.addEventListener('click', (event) => {
     event.target.classList.remove('show');
   }
 });
+
+
+$(function () {
+  $('[data-select-input]').each(function () {
+    const selectmenuInstance = $(this).selectmenu();
+    console.log(selectmenuInstance);
+  });
+});

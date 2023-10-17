@@ -320,6 +320,10 @@
 
 .hotel-package-tabs {
 
+  .tabs__header-item.active {
+    color: #8ABED1;
+  }
+
   &.tabs {
     position: relative;
     width: 100%;

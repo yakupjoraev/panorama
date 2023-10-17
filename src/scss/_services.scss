@@ -65,6 +65,15 @@
       row-gap: 20px;
     }
 
+    a {
+      color: inherit;
+      text-decoration: underline;
+
+      &:hover {
+        color: var(--Light);
+      }
+    }
+
     li {
       display: grid;
       row-gap: 16px;

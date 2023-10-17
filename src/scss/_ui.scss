@@ -1,0 +1,61 @@
+.ui-front {
+  z-index: 201;
+}
+
+.ui-selectmenu-button.ui-button {
+  background-color: transparent;
+  width: 100%;
+  border: 0;
+  padding: 0;
+
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &:hover {
+    background: transparent;
+
+    .ui-icon {
+      background-image: url('../img/icons/chevron-down-blue.png');
+    }
+  }
+}
+
+.ui-button .ui-icon {
+  background-image: url('../img/icons/chevron-down-blue.png');
+  background-repeat: no-repeat;
+  background-position: 100% center;
+  width: 24px;
+  height: 24px;
+}
+
+.ui-widget.ui-widget-content {
+  border: 2px solid #8abed1;
+  border-radius: 8px;
+}
+
+.ui-menu-item,
+.ui-selectmenu-text {
+  color: #000;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  background: var(--Light);
+  border-color: var(--Light);
+
+}
