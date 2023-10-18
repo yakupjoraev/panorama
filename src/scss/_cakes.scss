@@ -85,6 +85,51 @@
 .cakes-slider {
   position: relative;
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 308px;
+    background: linear-gradient(90deg, #38332D 0%, rgba(56, 51, 45, 0.00) 100%);
+    z-index: 1;
+
+    user-select: none;
+    pointer-events: none;
+
+    @media (max-width: $breakpoint992) {
+      width: 110px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      content: none;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 308px;
+    background: linear-gradient(90deg, #38332D 0%, rgba(56, 51, 45, 0.00) 100%);
+    transform: rotate(180deg);
+    z-index: 2;
+
+    user-select: none;
+    pointer-events: none;
+
+    @media (max-width: $breakpoint992) {
+      width: 110px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      content: none;
+    }
+  }
+
   // .cakes-slider__wrapper
 
   &__wrapper {}
@@ -106,7 +151,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 1;
+    z-index: 3;
     cursor: pointer;
 
     svg circle {

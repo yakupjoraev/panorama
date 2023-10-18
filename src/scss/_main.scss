@@ -4,6 +4,17 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: 1921px) {
+    background-repeat: repeat-x;
+  }
+
+  @media (max-width: 1920px) {
+    background-size: contain;
+  }
+
+  @media (max-width: $breakpoint768) {
+    background-image: none;
+  }
 
   h3,
   h2 {
@@ -552,9 +563,14 @@
 
   &__border {
     margin-top: 20px;
-    width: 100%;
+    width: 4000px;
     height: 1px;
     background-color: var(--White);
+
+    @media (max-width: $breakpoint1450) {
+      width: 100%;
+    }
+
 
     @media (max-width: $breakpoint992) {
       margin-top: 0;
@@ -646,6 +662,8 @@
   a {
     color: var(--Light);
     text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 8px;
 
     &:hover {
       text-decoration: none;
@@ -720,5 +738,57 @@
     @media (max-width: $breakpoint768) {
       width: 100%;
     }
+  }
+}
+
+
+.more-text-wrapper {
+  @media (max-width: $breakpoint992) {
+    & br {
+      display: none;
+    }
+
+    &.more {
+      .more-text-dots {
+        display: none;
+      }
+    }
+  }
+}
+
+.more-text-dots {
+  display: none;
+
+  @media (max-width: $breakpoint992) {
+    display: inline;
+  }
+}
+
+.more-text-text {
+  @media (max-width: $breakpoint992) {
+    display: none;
+
+    &.more {
+      display: block;
+    }
+  }
+}
+
+.more-text-btn {
+  display: none;
+
+  @media (max-width: $breakpoint992) {
+    display: block;
+    margin-top: 5px;
+
+    background-color: transparent;
+
+    color: var(--Light, #AB8C6F);
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16px;
   }
 }

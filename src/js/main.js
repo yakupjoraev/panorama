@@ -36,7 +36,7 @@ function burgerMenu() {
     }
   })
 }
-burgerMenu()
+burgerMenu();
 
 
 // Вызываем эту функцию, если нам нужно зафиксировать меню при скролле.
@@ -51,7 +51,53 @@ function fixedNav() {
     nav.classList.remove('fixed__nav')
   }
 }
-window.addEventListener('scroll', fixedNav)
+window.addEventListener('scroll', fixedNav);
+
+function headerSecond() {
+  const burger = document.querySelector('.burger-second');
+  const menu = document.querySelector('.menu');
+
+  if (!burger) {
+    return null;
+  }
+
+  let timeoutId;
+
+  // Функция для удаления классов
+  function removeClasses() {
+    menu.classList.remove('active-second-menu');
+    burger.classList.remove('active-burger-second');
+  }
+
+  burger.addEventListener('mouseenter', () => {
+    menu.classList.add('active-second-menu');
+    burger.classList.add('active-burger-second');
+
+    // Очищаем таймер, чтобы предотвратить удаление классов
+    clearTimeout(timeoutId);
+  });
+
+  burger.addEventListener('mouseleave', () => {
+    // Устанавливаем таймер на удаление классов через 2 секунды
+    timeoutId = setTimeout(removeClasses, 2000);
+  });
+
+  menu.addEventListener('mouseenter', () => {
+    // Очищаем таймер, чтобы предотвратить удаление классов
+    clearTimeout(timeoutId);
+  });
+
+  menu.addEventListener('mouseleave', () => {
+    // Устанавливаем таймер на удаление классов через 2 секунды
+    timeoutId = setTimeout(removeClasses, 2000);
+  });
+}
+
+headerSecond();
+
+
+
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -347,6 +393,32 @@ function tabs(headerSelector, tabSelector, contentSelector, activeClass, display
 // ЧЕТВЕРТЫЙ аргумент - класс активности, который будет добавлятся для таба, который сейчас активен.
 tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
 
+
+function moreText() {
+  const container = document.querySelector('[data-more-wrapper]');
+
+  if (!container) {
+    return null
+  }
+
+  const toggleButton = container.querySelector("[data-more-btn]");
+  const textBlock = container.querySelector("[data-more-text]");
+
+  container.addEventListener("click", function () {
+    this.classList.toggle("more");
+    textBlock.classList.toggle("more");
+
+    if (textBlock) {
+      if (textBlock.classList.contains("more")) {
+        toggleButton.textContent = "Свернуть";
+      } else {
+        toggleButton.textContent = "Читать далее";
+      }
+    }
+  });
+}
+
+moreText();
 
 
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
