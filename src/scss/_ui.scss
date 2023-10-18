@@ -7,6 +7,7 @@
   width: 100%;
   border: 0;
   padding: 0;
+  margin-bottom: 20px;
 
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
@@ -22,6 +23,10 @@
     .ui-icon {
       background-image: url('../img/icons/chevron-down-blue.png');
     }
+  }
+
+  @media (max-width: $breakpoint992) {
+    margin-bottom: 15px;
   }
 }
 

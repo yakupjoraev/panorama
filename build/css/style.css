@@ -587,7 +587,7 @@ html {
 
 .main-about__inner {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   padding: 100px 110px;
   background-color: var(--Dark, #302B27);
 }
@@ -1599,11 +1599,22 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 5px;
-  padding-left: 16px;
+  list-style: none;
+  counter-reset: disccc;
 }
 
 .news-detail ul li {
-  list-style: disc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  list-style: none;
+  counter-increment: disccc;
   font-family: var(--primary-font);
   font-size: 20px;
   font-style: normal;
@@ -1611,6 +1622,26 @@ html {
   line-height: normal;
   letter-spacing: 0.2px;
   color: var(--Dark, #302B27);
+}
+
+.news-detail ul li::before {
+  content: counter(disccc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 12px;
+  width: 3px;
+  min-width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: var(--Dark);
+  font-size: 0;
 }
 
 .news-detail time {
@@ -2125,7 +2156,7 @@ html {
 }
 
 .halls__black-arrow:hover svg circle {
-  fill: #ab8c6f;
+  fill: rgba(171, 140, 111, 0.2);
   stroke: #ab8c6f;
 }
 
@@ -2285,7 +2316,7 @@ html {
 }
 
 .terrace__arrow:hover svg circle {
-  fill: #ab8c6f;
+  fill: rgba(171, 140, 111, 0.2);
   stroke: #ab8c6f;
 }
 
@@ -2577,6 +2608,8 @@ html {
 }
 
 .form__count-sum {
+  outline: 0;
+  width: 100%;
   color: var(--Primary, #38332D);
   text-align: center;
   font-variant-numeric: lining-nums proportional-nums;
@@ -3012,7 +3045,7 @@ html {
 }
 
 .cakes-slider__arrow:hover svg circle {
-  fill: #ab8c6f;
+  fill: rgba(171, 140, 111, 0.1);
   stroke: #ab8c6f;
 }
 
@@ -3107,6 +3140,10 @@ html {
   -ms-flex-line-pack: baseline;
       align-content: baseline;
   text-align: center;
+}
+
+.children-cakes__inner ul li p {
+  font-size: 20px;
 }
 
 .cakes-form {
@@ -3617,11 +3654,22 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 5px;
-  padding-left: 16px;
+  list-style: none;
+  counter-reset: disccc;
 }
 
 .package ul li {
-  list-style: disc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  list-style: none;
+  counter-increment: disccc;
   font-family: var(--primary-font);
   font-size: 20px;
   font-style: normal;
@@ -3631,7 +3679,28 @@ html {
   color: var(--Dark, #302B27);
 }
 
+.package ul li::before {
+  content: counter(disccc);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 14px;
+  width: 3px;
+  min-width: 3px;
+  height: 3px;
+  border-radius: 100%;
+  background-color: var(--Dark);
+  font-size: 0;
+}
+
 .package__inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3867,7 +3936,7 @@ html {
 }
 
 .footer {
-  padding: 100px 0 108px;
+  padding: 100px 0 80px;
   background-color: var(--Primary, #38332D);
 }
 
@@ -3940,8 +4009,7 @@ html {
   font-size: 16px;
   letter-spacing: 0.16px;
   color: var(--White);
-  -ms-flex-item-align: end;
-      align-self: end;
+  margin-top: 20px;
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
@@ -3968,6 +4036,17 @@ html {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
+}
+
+.footer__nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 14px;
 }
 
 .footer__nav-link {
@@ -4791,6 +4870,7 @@ html {
   width: 100%;
   border: 0;
   padding: 0;
+  margin-bottom: 20px;
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
   font-family: var(--secondary-font);
@@ -6287,6 +6367,10 @@ a.ui-button:active,
     font-size: 16px;
   }
 
+  .package ul li::before {
+    margin-top: 11px;
+  }
+
   .package ul li {
     font-size: 16px;
     letter-spacing: 0.16px;
@@ -6298,10 +6382,17 @@ a.ui-button:active,
         -ms-flex-direction: column;
             flex-direction: column;
     row-gap: 30px;
+    padding-bottom: 80px;
   }
 
   .package__pictures img {
     height: 480px;
+  }
+
+  .package__pictures a {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 
   .package__pictures {
@@ -6407,6 +6498,13 @@ a.ui-button:active,
     row-gap: 10px;
     max-width: 320px;
     margin-left: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__nav ul {
+    row-gap: 10px;
   }
 
   .footer__nav-link {
@@ -6484,6 +6582,10 @@ a.ui-button:active,
     font-size: 24px;
   }
 
+  .book-table .form__groups {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .advertising-window__picture img {
     width: 330px;
     height: 330px;
@@ -6544,6 +6646,10 @@ a.ui-button:active,
 
   .basket-window__form h4 {
     font-size: 24px;
+  }
+
+  .ui-selectmenu-button.ui-button {
+    margin-bottom: 15px;
   }
 }
 
@@ -6734,6 +6840,13 @@ a.ui-button:active,
     text-align: center;
   }
 
+  .brown-block__news ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+
   .brown-block__chef {
     row-gap: 30px;
   }
@@ -6788,6 +6901,10 @@ a.ui-button:active,
   .news-detail ul {
     margin-bottom: 20px;
     row-gap: 2px;
+  }
+
+  .news-detail ul li::before {
+    margin-top: 10px;
   }
 
   .news-detail__header {
@@ -7181,6 +7298,7 @@ a.ui-button:active,
             order: 4;
     font-size: 16px;
     letter-spacing: 0.16px;
+    margin-top: 0;
   }
 
   .footer__politycal br {

@@ -121,7 +121,7 @@
     &:hover {
 
       svg circle {
-        fill: rgba(171, 140, 111, 1);
+        fill: rgba(171, 140, 111, 0.1);
         stroke: rgba(171, 140, 111, 1);
       }
 
@@ -249,6 +249,10 @@
         justify-items: center;
         align-content: baseline;
         text-align: center;
+
+        p {
+          font-size: 20px;
+        }
       }
     }
   }

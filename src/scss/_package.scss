@@ -39,7 +39,11 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-    padding-left: 16px;
+    // padding-left: 16px;
+
+
+    list-style: none;
+    counter-reset: disccc;
 
     @media (max-width: $breakpoint768) {
       row-gap: 2px;
@@ -47,7 +51,11 @@
   }
 
   ul li {
-    list-style: disc;
+    display: flex;
+    align-items: flex-start;
+    column-gap: 10px;
+    list-style: none;
+    counter-increment: disccc;
     font-family: var(--primary-font);
     font-size: 20px;
     font-style: normal;
@@ -55,6 +63,24 @@
     line-height: normal;
     letter-spacing: 0.2px;
     color: var(--Dark, #302B27);
+
+    &::before {
+      content: counter(disccc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 14px;
+      width: 3px;
+      min-width: 3px;
+      height: 3px;
+      border-radius: 100%;
+      background-color: var(--Dark);
+      font-size: 0;
+
+      @media (max-width: $breakpoint992) {
+        margin-top: 11px;
+      }
+    }
 
     @media (max-width: $breakpoint992) {
       font-size: 16px;
@@ -65,12 +91,14 @@
   // .package__inner
 
   &__inner {
+    position: relative;
     display: flex;
     column-gap: 40px;
 
     @media (max-width: $breakpoint992) {
       flex-direction: column;
       row-gap: 30px;
+      padding-bottom: 80px;
     }
   }
 
@@ -107,6 +135,12 @@
 
       &:hover {
         background-color: var(--Light);
+      }
+
+      @media (max-width: $breakpoint992) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
       }
     }
 

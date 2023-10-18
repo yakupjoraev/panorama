@@ -166,6 +166,8 @@
   // .form__count-sum
 
   &__count-sum {
+    outline: 0;
+    width: 100%;
     color: var(--Primary, #38332D);
     text-align: center;
     font-variant-numeric: lining-nums proportional-nums;

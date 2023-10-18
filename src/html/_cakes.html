@@ -119,14 +119,14 @@
           <img src="./img/cakes/cakes-icon-3.svg" alt="">
           <h4>Доставка</h4>
 
-          <p>бесплатная по городу</p>
+          <p>бесплатная<br> по городу</p>
         </li>
 
         <li>
           <img src="./img/cakes/cakes-icon-4.svg" alt="">
           <h4>Примеры</h4>
 
-          <a href="#" download="">скачать каталог</a>
+          <a href="#" download="">скачать<br> каталог</a>
         </li>
       </ul>
     </div>
@@ -167,7 +167,7 @@
               <button type="button" class="form__count-minus" data-form-count-minus>
                 <img src="./img/icons/minus.svg" alt="minus">
               </button>
-              <div class="form__count-sum" data-value="1" data-form-count-sum>1</div>
+              <input class="form__count-sum" type="number" data-form-count-sum value="1">
               <button type="button" class="form__count-plus" data-form-count-plus>
                 <img src="./img/icons/plus.svg" alt="plus">
               </button>
@@ -177,8 +177,15 @@
         </div>
 
         <div class="form__group">
-          <label class="form__label" for="">Желаемый зал</label>
-          <input class="form__input" type="text" placeholder="Выберите зал">
+          <label class="form__label" for="select4">Желаемый зал</label>
+
+          <select class="form__input form__input-select" name="select4" data-select-input>
+            <option>Люкс1</option>
+            <option>Люкс2</option>
+            <option selected="selected">Люкс</option>
+            <option>Люкс4</option>
+            <option>Люкс5</option>
+          </select>
           <div class="form__border"></div>
         </div>
 

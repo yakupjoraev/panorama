@@ -93,7 +93,7 @@ function dateInputs() {
     IMask(dateInput, {
       mask: Date,
       min: new Date(2010, 0, 1),
-      max: new Date(2030, 0, 1),
+      max: new Date(2040, 0, 1),
       lazy: true,
     });
   });
@@ -106,7 +106,7 @@ function formCount() {
   const countContainers = document.querySelectorAll('[data-form-count]');
 
   if (!countContainers) {
-    return null
+    return null;
   }
 
   // Функция для обновления класса .minimum и значения счетчика
@@ -114,10 +114,20 @@ function formCount() {
     const countMinusButton = container.querySelector('[data-form-count-minus]');
     const countPlusButton = container.querySelector('[data-form-count-plus]');
     const countSumElement = container.querySelector('[data-form-count-sum]');
-    const countValue = parseInt(countSumElement.getAttribute('data-value'));
-
     const minValue = 1;
-    let currentValue = parseInt(countSumElement.textContent);
+
+    // Функция для обновления значений и атрибутов
+    function updateCountValue() {
+      if (currentValue <= minValue) {
+        container.classList.add('minimum');
+      } else {
+        container.classList.remove('minimum');
+      }
+      countSumElement.value = currentValue;
+      countSumElement.setAttribute('data-value', currentValue);
+    }
+
+    let currentValue = parseInt(countSumElement.value);
 
     countPlusButton.addEventListener('click', () => {
       currentValue++;
@@ -131,15 +141,19 @@ function formCount() {
       }
     });
 
-    function updateCountValue() {
-      if (currentValue <= minValue) {
-        container.classList.add('minimum');
+    // Обработчик события input для обновления data-value при ручном вводе
+    countSumElement.addEventListener('input', () => {
+      const newValue = parseInt(countSumElement.value);
+      if (!isNaN(newValue) && newValue >= minValue) {
+        currentValue = newValue;
+        updateCountValue();
       } else {
-        container.classList.remove('minimum');
+        countSumElement.value = currentValue;
       }
-      countSumElement.textContent = currentValue;
-      countSumElement.setAttribute('data-value', currentValue); // Обновляем атрибут data-value
-    }
+    });
+
+    // Инициализация значений
+    updateCountValue();
   }
 
   // Проходим по всем счетчикам и применяем функцию

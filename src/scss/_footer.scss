@@ -1,6 +1,6 @@
 // Footer
 .footer {
-  padding: 100px 0 108px;
+  padding: 100px 0 80px;
   background-color: var(--Primary, #38332D);
 
   @media (max-width: $breakpoint768) {
@@ -131,7 +131,8 @@
     letter-spacing: 0.16px;
     color: var(--White);
 
-    align-self: end;
+    // align-self: end;
+    margin-top: 20px;
     order: 5;
 
     br {
@@ -147,6 +148,7 @@
       order: 4;
       font-size: 16px;
       letter-spacing: 0.16px;
+      margin-top: 0;
 
       br {
         display: block;
@@ -169,10 +171,21 @@
     grid-row: span 3;
     order: 2;
 
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+    }
+
     @media (max-width: $breakpoint992) {
       row-gap: 10px;
       max-width: 320px;
       margin-left: 0;
+      align-items: center;
+
+      ul {
+        row-gap: 10px;
+      }
     }
 
     @media (max-width: $breakpoint768) {

@@ -142,6 +142,12 @@
       font-size: 32px;
     }
   }
+
+  .form__groups {
+    @media (max-width: $breakpoint992) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
 
 .advertising-window {
