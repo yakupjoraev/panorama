@@ -80,7 +80,7 @@ function headerSecond() {
 
   burger.addEventListener('mouseleave', () => {
     // Устанавливаем таймер на удаление классов через 2 секунды
-    timeoutId = setTimeout(removeClasses, 2000);
+    timeoutId = setTimeout(removeClasses, 1000);
   });
 
   menu.addEventListener('mouseenter', () => {
@@ -90,7 +90,7 @@ function headerSecond() {
 
   menu.addEventListener('mouseleave', () => {
     // Устанавливаем таймер на удаление классов через 2 секунды
-    timeoutId = setTimeout(removeClasses, 2000);
+    timeoutId = setTimeout(removeClasses, 1000);
   });
 }
 
