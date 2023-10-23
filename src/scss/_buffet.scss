@@ -337,6 +337,10 @@
     flex-direction: column;
     row-gap: 40px;
     padding-top: 36px;
+
+    @media (max-width: $breakpoint992) {
+      padding-top: 0;
+    }
   }
 }
 
@@ -744,6 +748,25 @@
       img {
         height: 194px;
       }
+    }
+  }
+}
+
+.halls__black-block {
+
+  h4 {
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+  }
+}
+
+.halls__black-info {
+  h4 {
+    display: none;
+
+    @media (max-width: $breakpoint992) {
+      display: block;
     }
   }
 }

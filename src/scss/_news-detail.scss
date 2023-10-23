@@ -1,6 +1,6 @@
 .news-detail {
   padding-bottom: 75px;
-  background-color: var(--White, #FFF);
+  background-color: #F3EFEC;
   overflow: hidden;
 
   @media (max-width: $breakpoint992) {
@@ -118,7 +118,7 @@
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
-    row-gap: 5px;
+    // row-gap: 5px;
     // padding-left: 16px;
 
     list-style: none;
@@ -134,6 +134,7 @@
     display: flex;
     align-items: flex-start;
     column-gap: 10px;
+    padding-left: 10px;
     list-style: none;
     counter-increment: disccc;
     font-family: var(--primary-font);

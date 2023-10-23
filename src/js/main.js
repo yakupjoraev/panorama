@@ -139,8 +139,9 @@ function dateInputs() {
     IMask(dateInput, {
       mask: Date,
       min: new Date(2010, 0, 1),
-      max: new Date(2040, 0, 1),
+      max: new Date(2100, 0, 1),
       lazy: true,
+
     });
   });
 

@@ -112,6 +112,19 @@
       font-weight: 500;
       line-height: normal;
       opacity: 0.3;
+
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      -ms-line-clamp: 1;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      display: -webkit-box;
+      display: box;
+      word-wrap: break-word;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
     }
 
     @media (max-width: $breakpoint992) {
@@ -349,6 +362,10 @@
   line-height: 120%;
 }
 
+.form__radio-text:hover~.form__radio-clue {
+  opacity: 1;
+}
+
 .form__radio-clue {
   position: absolute;
   left: 100%;
@@ -364,6 +381,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  opacity: 0;
+
+  transition: opacity 0.2s linear;
 
   &::before {
     content: '';
@@ -377,6 +397,7 @@
   }
 
   @media (max-width: $breakpoint992) {
+    opacity: 1;
     bottom: 120%;
     left: 40%;
   }
@@ -398,9 +419,6 @@
   }
 }
 
-.form__groups--tripl {
-  grid-template-columns: repeat(3, 1fr);
-}
 
 .form__input-select {
   font-family: var(--secondary-font);
@@ -415,4 +433,8 @@
     padding: 10px;
     margin: 10px;
   }
+}
+
+.form__groups--tripl {
+  grid-template-columns: repeat(3, 1fr) !important;
 }
