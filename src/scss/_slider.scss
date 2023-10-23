@@ -57,7 +57,8 @@
   // .slider__slide
 
   &__slide {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 425px;
 
@@ -91,6 +92,7 @@
     }
 
     time {
+      margin-top: auto;
       font-family: var(--primary-font);
       font-size: 16px;
       font-style: normal;
