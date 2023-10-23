@@ -752,6 +752,10 @@ html {
           flex: 0 1 715px;
 }
 
+.main-chef__info a:hover {
+  border-color: var(--White);
+}
+
 .main-chef__info p {
   max-width: 586px;
 }
@@ -1105,6 +1109,10 @@ html {
 
 .main-brown-block__link {
   white-space: nowrap;
+}
+
+.main-brown-block__link:hover {
+  border-color: var(--White);
 }
 
 .more-text-dots {

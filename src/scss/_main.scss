@@ -177,6 +177,13 @@
   &__info {
     flex: 0 1 715px;
 
+    a {
+
+      &:hover {
+        border-color: var(--White);
+      }
+    }
+
     p {
       max-width: 586px;
     }
@@ -729,6 +736,10 @@
 
   &__link {
     white-space: nowrap;
+
+    &:hover {
+      border-color: var(--White);
+    }
 
     @media (max-width: $breakpoint768) {
       width: 100%;
