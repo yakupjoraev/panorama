@@ -1967,7 +1967,14 @@ html {
   position: relative;
   display: grid;
   height: 100%;
+  overflow: hidden;
   color: var(--White);
+}
+
+.delivery__menu-link:hover img {
+  -webkit-transform: scale(1.06);
+      -ms-transform: scale(1.06);
+          transform: scale(1.06);
 }
 
 .delivery__menu-link img {
@@ -1978,6 +1985,11 @@ html {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  -o-transition: transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
 }
 
 .delivery__menu-link::before {
@@ -1991,6 +2003,11 @@ html {
   background: -o-linear-gradient(top, rgba(56, 51, 45, 0) 0%, #38332D 100%);
   background: linear-gradient(180deg, rgba(56, 51, 45, 0) 0%, #38332D 100%);
   z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .delivery__menu-label {
