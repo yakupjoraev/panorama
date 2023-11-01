@@ -279,6 +279,23 @@ html {
   border-color: transparent;
 }
 
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-bg video {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
@@ -491,8 +508,8 @@ html {
 }
 
 .hero {
+  position: relative;
   padding: 196px 0 100px;
-  background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1124,6 +1141,7 @@ html {
 }
 
 .hero-name {
+  position: relative;
   width: 100%;
   min-height: 506px;
   height: -webkit-fit-content;
