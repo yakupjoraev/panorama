@@ -119,3 +119,43 @@
     }
   }
 }
+
+.chef__picture {
+  .chef__picture--mobile {
+    display: none;
+
+    @media (max-width: $breakpoint768) {
+      display: block;
+    }
+
+    @media (max-width: $breakpoint480) {
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .chef__picture--tablet {
+    display: none;
+
+    @media (max-width: $breakpoint992) {
+      display: block;
+    }
+
+    @media (max-width: $breakpoint768) {
+      display: none;
+    }
+
+  }
+
+  .chef__picture--desktop {
+    display: block;
+
+
+    @media (max-width: $breakpoint992) {
+      display: none;
+    }
+
+  }
+}

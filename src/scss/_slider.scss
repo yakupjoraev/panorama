@@ -103,6 +103,11 @@
     }
 
     a {
+      display: flex;
+      flex-direction: column;
+    }
+
+    a.primary-btn {
       margin-top: auto;
 
       &:hover {
