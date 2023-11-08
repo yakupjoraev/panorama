@@ -316,6 +316,16 @@ html {
   }
 }
 
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright__content-cell {
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
 .header {
   background-color: var(--Dark, #302B27);
   z-index: 2;

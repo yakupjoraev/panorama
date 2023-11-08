@@ -176,3 +176,10 @@ html {
     opacity: 1;
   }
 }
+
+.ymaps-2-1-79-map-copyrights-promo,
+.ymaps-2-1-79-copyright__content-cell {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
