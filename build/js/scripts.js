@@ -486,7 +486,7 @@ function map() {
 
 map();
 
-document.addEventListener('DOMContentLoaded', function () {
+function radioDelivery() {
   var radioGroups = document.querySelectorAll('[data-radio-delivery]');
   var deliveryForm = document.querySelector('[data-delivery-form]');
 
@@ -501,7 +501,10 @@ document.addEventListener('DOMContentLoaded', function () {
       deliveryForm.classList.add(selectedDeliveryMethod.toLowerCase());
     });
   });
-});
+}
+
+radioDelivery();
+
 
 
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
@@ -537,3 +540,15 @@ $(function () {
   });
 });
 
+
+
+document.body.addEventListener('click', function (event) {
+  const target = event.target.closest('.modal');
+  if (!target) return;
+
+  dateInputs();
+  formCount();
+  phoneMask();
+
+  radioDelivery();
+});

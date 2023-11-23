@@ -463,7 +463,7 @@ function map() {
     let placemark = new ymaps.Placemark(center, {}, {
       iconLayout: 'default#image',
       // iconImageHref: '../img/icons/pin.svg',
-      iconImageHref: 'local/templates/main/img/icons/pin.svg',
+      iconImageHref: '/local/templates/main/img/icons/pin.svg',
       iconImageSize: [42, 42],
       iconImageOffset: [-14, -64]
     })
@@ -485,7 +485,7 @@ function map() {
 
 map();
 
-document.addEventListener('DOMContentLoaded', function () {
+function radioDelivery() {
   var radioGroups = document.querySelectorAll('[data-radio-delivery]');
   var deliveryForm = document.querySelector('[data-delivery-form]');
 
@@ -500,7 +500,10 @@ document.addEventListener('DOMContentLoaded', function () {
       deliveryForm.classList.add(selectedDeliveryMethod.toLowerCase());
     });
   });
-});
+}
+
+radioDelivery();
+
 
 
 const openModalBtns = document.querySelectorAll('.open-modal-btn');
@@ -534,4 +537,17 @@ $(function () {
     const selectmenuInstance = $(this).selectmenu();
     console.log(selectmenuInstance);
   });
+});
+
+
+
+document.body.addEventListener('click', function (event) {
+  const target = event.target.closest('.modal');
+  if (!target) return;
+
+  dateInputs();
+  formCount();
+  phoneMask();
+
+  radioDelivery();
 });
