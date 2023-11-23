@@ -97,6 +97,28 @@ headerSecond();
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const anchors = document.querySelectorAll('a[href*="#"]')
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href').substr(1)
+      const targetElement = document.getElementById(blockID)
+
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    })
+  };
+})
+
+
+
 
 
 
@@ -421,20 +443,6 @@ function moreText() {
 
 moreText();
 
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-
-    const blockID = anchor.getAttribute('href').substr(1)
-
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-};
 
 function map() {
   const container = document.querySelector('.contacts')
@@ -454,7 +462,8 @@ function map() {
 
     let placemark = new ymaps.Placemark(center, {}, {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icons/pin.svg',
+      // iconImageHref: '../img/icons/pin.svg',
+      iconImageHref: 'local/templates/main/img/icons/pin.svg',
       iconImageSize: [42, 42],
       iconImageOffset: [-14, -64]
     })
@@ -475,6 +484,23 @@ function map() {
 }
 
 map();
+
+document.addEventListener('DOMContentLoaded', function () {
+  var radioGroups = document.querySelectorAll('[data-radio-delivery]');
+  var deliveryForm = document.querySelector('[data-delivery-form]');
+
+  radioGroups.forEach(function (radioGroup) {
+    radioGroup.addEventListener('change', function () {
+      var selectedDeliveryMethod = radioGroup.getAttribute('data-radio-delivery');
+
+      // Remove existing classes from the form
+      deliveryForm.classList.remove('samovyzov', 'kurierom');
+
+      // Add class based on the selected delivery method
+      deliveryForm.classList.add(selectedDeliveryMethod.toLowerCase());
+    });
+  });
+});
 
 
 const openModalBtns = document.querySelectorAll('.open-modal-btn');

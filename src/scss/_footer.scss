@@ -126,18 +126,30 @@
 
   // .footer__politycal
 
-  &__politycal {
-    font-size: 16px;
-    letter-spacing: 0.16px;
-    color: var(--White);
+  &__politycals {
 
     // align-self: end;
     margin-top: 20px;
     order: 5;
 
-    br {
-      display: none;
+    @media (max-width: $breakpoint768) {
+      order: 4;
+
+      margin-top: 0;
     }
+
+    @media (max-width: $breakpoint480) {
+      display: flex;
+      align-items: center;
+      column-gap: 5px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__politycal {
+    font-size: 16px;
+    letter-spacing: 0;
+    color: var(--White);
 
     @media (max-width: $breakpoint992) {
       font-size: 14px;
@@ -145,14 +157,8 @@
     }
 
     @media (max-width: $breakpoint768) {
-      order: 4;
       font-size: 16px;
       letter-spacing: 0.16px;
-      margin-top: 0;
-
-      br {
-        display: block;
-      }
     }
   }
 
@@ -333,7 +339,7 @@
     }
   }
 
-  .footer__politycal {
+  .footer__politycals {
     order: 5;
 
     @media (max-width: $breakpoint992) {

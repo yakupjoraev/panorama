@@ -697,11 +697,11 @@
           Назад в корзину
         </a>
 
-        <form class="basket-window__form" action="#">
+        <form class="basket-window__form" action="#" data-delivery-form>
           <h4>Выберите способ доставки</h4>
 
           <div class="form__radioes">
-            <div class="form__radio-group">
+            <div class="form__radio-group" data-radio-delivery="samovyzov">
               <input class="form__radio-input" type="radio" name="delivery-method-2" id="delivery-method3">
 
               <label class="form__radio-label" for="delivery-method3">
@@ -711,7 +711,7 @@
               </label>
             </div>
 
-            <div class="form__radio-group">
+            <div class="form__radio-group" data-radio-delivery="kurierom">
               <input class="form__radio-input" type="radio" name="delivery-method-2" id="delivery-method4" checked>
 
               <label class="form__radio-label" for="delivery-method4">
@@ -760,9 +760,9 @@
             </div>
           </div>
 
-          <h4>Куда курьеру доставить заказ?</h4>
+          <h4 class="title-for-kurierom">Куда курьеру доставить заказ?</h4>
 
-          <div class="form__groups">
+          <div class="form__groups  group-for-kurierom">
             <div class="form__group">
               <label class="form__label" for="">Улица*</label>
               <input class="form__input" type="text" placeholder="Введите улицу">
@@ -771,27 +771,27 @@
 
             <div class="form__group">
               <label class="form__label" for="">Дом*</label>
-              <input class="form__input" type="number" placeholder="Номер дома">
+              <input class="form__input" type="number" placeholder="Номер дома" min="0">
               <div class="form__border"></div>
             </div>
           </div>
 
-          <div class="form__groups form__groups--tripl">
+          <div class="form__groups form__groups--tripl  group-for-kurierom">
             <div class="form__group">
               <label class="form__label" for="">Подъезд</label>
-              <input class="form__input" type="number" placeholder="Номер подъезда">
+              <input class="form__input" type="number" placeholder="Номер подъезда" min="0">
               <div class="form__border"></div>
             </div>
 
             <div class="form__group">
               <label class="form__label" for="">Этаж</label>
-              <input class="form__input" type="number" placeholder="Введите этаж">
+              <input class="form__input" type="number" placeholder="Введите этаж" min="0">
               <div class="form__border"></div>
             </div>
 
             <div class="form__group">
               <label class="form__label" for="">Квартира</label>
-              <input class="form__input" type="number" placeholder="Номер квартиры">
+              <input class="form__input" type="number" placeholder="Номер квартиры" min="0">
               <div class="form__border"></div>
             </div>
           </div>

@@ -4313,18 +4313,17 @@ html {
   opacity: 0.5;
 }
 
-.footer__politycal {
-  font-size: 16px;
-  letter-spacing: 0.16px;
-  color: var(--White);
+.footer__politycals {
   margin-top: 20px;
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
 }
 
-.footer__politycal br {
-  display: none;
+.footer__politycal {
+  font-size: 16px;
+  letter-spacing: 0;
+  color: var(--White);
 }
 
 .footer__nav {
@@ -4438,7 +4437,7 @@ html {
           order: 4;
 }
 
-.footer-second .footer__politycal {
+.footer-second .footer__politycals {
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
@@ -5162,6 +5161,11 @@ html {
 
 .basket-window__form h4 i {
   font-style: italic;
+}
+
+.basket-window__form.samovyzov .title-for-kurierom,
+.basket-window__form.samovyzov .group-for-kurierom {
+  display: none;
 }
 
 .ui-front {
@@ -6994,7 +6998,7 @@ a.ui-button:active,
     max-width: 220px;
   }
 
-  .footer-second .footer__politycal {
+  .footer-second .footer__politycals {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
@@ -7758,17 +7762,16 @@ a.ui-button:active,
     max-width: 50px;
   }
 
-  .footer__politycal {
+  .footer__politycals {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    font-size: 16px;
-    letter-spacing: 0.16px;
     margin-top: 0;
   }
 
-  .footer__politycal br {
-    display: block;
+  .footer__politycal {
+    font-size: 16px;
+    letter-spacing: 0.16px;
   }
 
   .footer__nav {
@@ -7802,7 +7805,7 @@ a.ui-button:active,
             order: 2;
   }
 
-  .footer-second .footer__politycal {
+  .footer-second .footer__politycals {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
@@ -7998,6 +8001,20 @@ a.ui-button:active,
 
   .halls ul li p {
     max-width: 240px;
+  }
+
+  .footer__politycals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 5px;
+       -moz-column-gap: 5px;
+            column-gap: 5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
